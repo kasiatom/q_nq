@@ -34,3 +34,24 @@ Bioinformatical tools are installed via conda. To use them conda must be initiat
   git pull
   ```
 
+### Screen 
+Use screen (virtual terminal) to run a long-lasting processes (like alignment or variant calling).
+ * Create new screen session:
+   ```bash
+   screen -S some_name
+   ```
+ * Activate `bio` environment inside the screen session (if needed), almost always
+   ```bash
+   conda activate bio
+   ```
+ * Run the command/script, it is good idea to save the logs to some file  
+   ```bash     
+   cmd &>my.log
+   ```
+
+  * Detach from the screen terminal (the command/srcipt will be executed in the background): <kbd>Ctrl</kbd> + <kbd>a</kbd> + <kbd>d</kbd>
+  * To return to the screen session type:
+    ```bash
+    screen -r some_name
+    ```
+   * Use `exit` (when inside the screen session) to close and kill it.    
