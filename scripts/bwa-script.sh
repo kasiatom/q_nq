@@ -10,6 +10,7 @@ do
 
   fq2=$(echo $fq1 | sed 's/_1.fq.gz/_2.fq.gz/')
   ID=$(basename $fq1 | sed 's/_1.fq.gz//')
+  echo mapuje $ID
 
   RG_ID="V350143589L3C001R001"
   RG_PU="$RG_ID"".""$ID"
@@ -27,16 +28,19 @@ do
 
 
    ## mark duplicated reads
+   echo zaznaczam duplikaty $ID
    gatk MarkDuplicates \
       -I $HOME/working/"$ID"_bwa-unsorted.sam \
       -O $HOME/working/"$ID"_bwa-markdup-unsorted.bam \
       -M $HOME/working/"$ID"_bwa-metrics.txt \
       --ASSUME_SORT_ORDER  queryname
 
-   ## sort and index, write to qnap 
+   ## sort and index, write to qnap
+   echo soruje 
    samtools sort $HOME/working/"$ID"_bwa-markdup-unsorted.bam -@ 10 -o $HOME/dominika/bams/"$ID"_bwa-markdup.bam
    samtools index $HOME/dominika/bams/"$ID"_bwa-markdup.bam
 
    ##clean
    rm $HOME/working/"$ID"_bwa-markdup-unsorted.bam $HOME/working/"$ID"_bwa-unsorted.sam 
 done
+echo swietna robota
