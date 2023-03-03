@@ -2,9 +2,6 @@
 
 set -e -o pipefail
 
-
-
-
 find  "$HOME/dominika/bams/" -name *bam  -exec basename \{} \; \
 | sed 's/_bwa-markdup.bam//' \
 | grep -v '^[ADEC][247]' 
@@ -14,8 +11,8 @@ find  "$HOME/dominika/bams/" -name *bam  -exec basename \{} \; \
         -R  $HOME/genome/scer.fa \
         -I  $HOME/dominika/bams/{}_bwa-markdup.bam \
         -O $HOME/working/{}_hc.gvcf.gz \
-        --pcr-indel-model AGGRESSIVE \-
-        -dont-use-soft-clipped-bases \
+        --pcr-indel-model AGGRESSIVE \
+        --dont-use-soft-clipped-bases \
         -ploidy 1 \
         -ERC GVCF'
 
