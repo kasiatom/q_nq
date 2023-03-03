@@ -4,7 +4,7 @@ set -e -o pipefail
 
 find  "$HOME/dominika/bams/" -name *bam  -exec basename \{} \; \
 | sed 's/_bwa-markdup.bam//' \
-| grep -v '^[ADEC][247]' 
+| grep -v '^[ADEC][247]' \
 | xargs -i -n 1 -P 10  bash -c \
     'gatk  --java-options "-Xmx24g" \
         HaplotypeCaller \
