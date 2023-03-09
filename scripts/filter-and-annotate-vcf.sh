@@ -57,7 +57,7 @@ tabix -p $path/tmp5.vcf.gz
 printf "D0\nA0\nE0\n" > $path/controls.txt
 bcftools  filter -e 'TYPE="snp" & (INFO/FS > 60 | INFO/ReadPosRankSum < -8.0 | INFO/SOR > 3.0 | INFO/MQ < 40.0 | INFO/MQRankSum < -12.5)' $path/tmp5.vcf.gz \
     | bcftools filter -e 'TYPE="indel" & (INFO/FS > 200 | INFO/ReadPosRankSum < -20.0 )' \
-    | bcftools filter -e 'QUAL<= 30.0 | INFO/MULTIALLELIC=1' |\
+    | bcftools filter -e 'QUAL<= 30.0 | INFO/MULTIALLELIC=1' \
     | bcftools filter -e 'COUNT(GT="mis") > 2' \
     | bcftools filter -e 'GT[@$path/controls.txt]="alt"' -o $path/q_nq_filtered-annotated.vcf.gz -O z
 
