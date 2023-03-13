@@ -75,14 +75,14 @@ rm -r $path/out
 
 ## make table
 paste \
-<(printf "CHROM\tPOS\tREF\tALT\tQUAL\tVEP_Genes\tVEP_SYMBOLs\tVEP_IMPACTs\tVEP_Consequences\tVEP_BIOTYPEs\tVEP_Protein_positions\tVEP_Amino_acids\tVEP_WORST_Gene\tVEP_WORST_SYMBOL\tVEP_WORST_IMPACT\tVEP_WORST_Consequence") \
+<(printf "CHROM\tPOS\tREF\tALT\tQUAL\tVEP_Genes\tVEP_SYMBOLs\tVEP_IMPACTs\tVEP_Consequences\tVEP_BIOTYPEs\tVEP_Protein_positions\tVEP_Amino_acids\tVEP_WORST_Gene\tVEP_WORST_SYMBOL\tVEP_WORST_IMPACT\tVEP_WORST_Consequence\n") \
 <(bcftools view -h $path/q_nq_filtered-annotated.vcf.gz | tail -1 | cut -f10- | sed 's/\t/_GT\t/g' | sed 's/$/_GT/') \
 <(bcftools view -h $path/q_nq_filtered-annotated.vcf.gz | tail -1 | cut -f10- | sed 's/\t/_DP\t/g' | sed 's/$/_DP/') \
 <(bcftools view -h $path/q_nq_filtered-annotated.vcf.gz | tail -1 | cut -f10- | sed 's/\t/_AD\t/g' | sed 's/$/_AD/') > $path/header
 
-bcftools query -f "%CHROM\t%POS\t%REF\t%QUAL\t%INFO/VEP_Gene\t%INFO/VEP_SYMBOL\t%INFO/VEP_IMPACT\t%INFO/VEP_Consequence\t%INFO/VEP_BIOTYPE\t%INFO/VEP_Protein_position\t%INFO/VEP_Amino_acids\t%INFO/VEP_WORST_Gene\t%INFO/VEP_WORST_SYMBOL\t%INFO/VEP_WORST_IMPACT\t%INFO/VEP_WORST_Consequence[\t%GT][\t%DP][\t%AD]\n" $path/q_nq_filtered-annotated.vcf.gz \
+bcftools query -f "%CHROM\t%POS\t%REF\t%ALT\t%QUAL\t%INFO/VEP_Gene\t%INFO/VEP_SYMBOL\t%INFO/VEP_IMPACT\t%INFO/VEP_Consequence\t%INFO/VEP_BIOTYPE\t%INFO/VEP_Protein_position\t%INFO/VEP_Amino_acids\t%INFO/VEP_WORST_Gene\t%INFO/VEP_WORST_SYMBOL\t%INFO/VEP_WORST_IMPACT\t%INFO/VEP_WORST_Consequence[\t%GT][\t%DP][\t%AD]\n" $path/q_nq_filtered-annotated.vcf.gz \
 > $path/tmp.tsv
 cat $path/header $path/tmp.tsv > $path/q_nq.tsv
 
 rm $path/header $path/tmp.tsv
-cp $path/q_nq.tsv 
+cp $path/q_nq.tsv $HOME/wiktoria/q_nq/data/
