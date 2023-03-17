@@ -81,7 +81,7 @@ paste \
 <(bcftools view -h $path/q_nq_filtered-annotated.vcf.gz | tail -1 | cut -f10- | sed 's/\t/_AD\t/g' | sed 's/$/_AD/') > $path/header
 
 bcftools query -f "%CHROM\t%POS\t%REF\t%ALT\t%QUAL\t%INFO/VEP_Gene\t%INFO/VEP_SYMBOL\t%INFO/VEP_IMPACT\t%INFO/VEP_Consequence\t%INFO/VEP_BIOTYPE\t%INFO/VEP_Protein_position\t%INFO/VEP_Amino_acids\t%INFO/VEP_WORST_Gene\t%INFO/VEP_WORST_SYMBOL\t%INFO/VEP_WORST_IMPACT\t%INFO/VEP_WORST_Consequence[\t%GT][\t%DP][\t%AD]\n" $path/q_nq_filtered-annotated.vcf.gz \
-> $path/tmp.tsv
+| sed 's/,/;/g' > $path/tmp.tsv
 cat $path/header $path/tmp.tsv > $path/q_nq.tsv
 
 rm $path/header $path/tmp.tsv
