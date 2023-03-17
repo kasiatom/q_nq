@@ -10,6 +10,7 @@ set -e -o pipefail
 ## Next steps should be performes in the terminal where you want to run the script (in screen, if you want to use screen)
 ## 5. conda activate bio
 ## 6. conda activate --stack vep
+## 7. cd q_nq;git pull;cd ..
 ## 7. q_nq/scripts/pop-variants-merge-and-annot.sh &>$path/anno.log 
 
 path=$HOME/working
