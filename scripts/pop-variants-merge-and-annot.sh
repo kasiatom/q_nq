@@ -26,7 +26,7 @@ do
 done    
 
 ## merge vcfs, split multiallelic sites, normalize variants
-VCFS=$path/"$ID"_tmp.vcf.gz
+VCFS=$path/*_tmp.vcf.gz
 bcftools merge $VCFS \
     | bcftools norm -m -any \
     | bcftools norm -f $REF \
@@ -35,7 +35,7 @@ tabix -p vcf $path/q_nq_merged-norm.vcf.gz
 
 ## annotate with VEP
 vep --cache --offline --format vcf --vcf --force_overwrite \
-    --dir_cache $HOME/genome/vep_data/ \
+    --dir_cache $HOME/vep_data/ \
     --input_file $path/q_nq_merged-norm.vcf.gz \
     --species saccharomyces_cerevisiae \
     --compress_output bgzip \
@@ -71,7 +71,7 @@ paste \
 <(bcftools view -h $path/q_nq_filtered-annotated.vcf.gz | tail -1 | cut -f10- | sed 's/\t/_DP\t/g' | sed 's/$/_DP/') \
 <(bcftools view -h $path/q_nq_filtered-annotated.vcf.gz | tail -1 | cut -f10- | sed 's/\t/_AD\t/g' | sed 's/$/_AD/') > $path/header
 
-bcftools query -f "%CHROM\t%POS\t%REF\t%ALT\t%FILTER\t%INFO/VEP_Gene\t%INFO/VEP_SYMBOL\t%INFO/VEP_IMPACT\t%INFO/VEP_Consequence\t%INFO/VEP_BIOTYPE\t%INFO/VEP_Protein_position\t%INFO/VEP_Amino_acids\t%INFO/VEP_WORST_Gene\t%INFO/VEP_WORST_SYMBOL\t%INFO/VEP_WORST_IMPACT\t%INFO/VEP_WORST_Consequence[\t%AF][\t%DP][\t%AD]\n" $path/q_nq_filtered-annotated.vcf.gz \
+bcftools query -f "%CHROM\t%POS\t%REF\t%ALT\t%FILTER\t%INFO/VEP_Gene\t%INFO/VEP_SYMBOL\t%INFO/VEP_IMPACT\t%INFO/VEP_Consequence\t%INFO/VEP_BIOTYPE\t%INFO/VEP_Protein_position\t%INFO/VEP_Amino_acids\t%INFO/VEP_WORST_Gene\t%INFO/VEP_WORST_SYMBOL\t%INFO/VEP_WORST_IMPACT\t%INFO/VEP_WORST_Consequence[\t%AF][\t%DP][\t%AD]\n" $path/q_nq_pop-annotated.vcf.gz \
 | sed 's/,/;/g' > $path/tmp.tsv
 cat $path/header $path/tmp.tsv > $path/q_nq_pop.tsv
 
