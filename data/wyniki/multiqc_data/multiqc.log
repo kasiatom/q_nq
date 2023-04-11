@@ -1,0 +1,53 @@
+[2023-04-10 19:59:46,333] multiqc                                            [DEBUG  ]  No MultiQC config found: /home/mikolaj.radosz/.conda/envs/fastqc/lib/python2.7/site-packages/multiqc-1.0.dev0-py2.7.egg/multiqc_config.yaml
+[2023-04-10 19:59:46,333] multiqc                                            [DEBUG  ]  No MultiQC config found: /home/mikolaj.radosz/.multiqc_config.yaml
+[2023-04-10 19:59:46,334] multiqc                                            [DEBUG  ]  No MultiQC config found: multiqc_config.yaml
+[2023-04-10 19:59:46,334] multiqc                                            [DEBUG  ]  Command used: /home/mikolaj.radosz/.conda/envs/fastqc/bin/multiqc 37Q -o wyniki
+[2023-04-10 19:59:46,334] multiqc                                            [DEBUG  ]  Could not connect to multiqc.info for version check
+[2023-04-10 19:59:46,334] multiqc                                            [INFO   ]  This is MultiQC v1.0.dev0
+[2023-04-10 19:59:46,334] multiqc                                            [DEBUG  ]  Command     : /home/mikolaj.radosz/.conda/envs/fastqc/bin/multiqc 37Q -o wyniki
+[2023-04-10 19:59:46,334] multiqc                                            [DEBUG  ]  Working dir : /home/mikolaj.radosz/analiza-multiqc
+[2023-04-10 19:59:46,334] multiqc                                            [INFO   ]  Template    : default
+[2023-04-10 19:59:46,334] multiqc                                            [INFO   ]  Searching '37Q'
+[2023-04-10 19:59:46,334] multiqc                                            [DEBUG  ]  Analysing modules: custom_content, peddy, methylQA, qualimap, preseq, quast, rseqc, busco, goleft_indexcov, snpeff, gatk, htseq, bcftools, featureCounts, picard, prokka, samblaster, samtools, bamtools, bismark, hicup, salmon, kallisto, slamdunk, star, tophat, bowtie2, bowtie1, cutadapt, trimmomatic, skewer, fastq_screen, fastqc, clusterflow
+[2023-04-10 19:59:46,334] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /tmp/tmpr4ITK7
+[2023-04-10 19:59:46,535] multiqc.modules.custom_content.custom_content      [DEBUG  ]  No custom content found
+[2023-04-10 19:59:46,538] multiqc.modules.peddy.peddy                        [DEBUG  ]  Could not find any reports in ('37Q',)
+[2023-04-10 19:59:46,540] multiqc.modules.methylQA.methylQA                  [DEBUG  ]  Could not find any reports in ('37Q',)
+[2023-04-10 19:59:46,542] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Using default Qualimap thresholds: 1, 5, 10, 30, 50
+[2023-04-10 19:59:46,545] multiqc.modules.qualimap.qualimap                  [DEBUG  ]  Could not find any reports in ('37Q',)
+[2023-04-10 19:59:46,548] multiqc.modules.preseq.preseq                      [DEBUG  ]  Could not find any preseq data in ('37Q',)
+[2023-04-10 19:59:46,550] multiqc.modules.quast.quast                        [DEBUG  ]  Could not find any reports in ('37Q',)
+[2023-04-10 19:59:46,558] multiqc.modules.rseqc.rseqc                        [DEBUG  ]  Could not find any reports in ('37Q',)
+[2023-04-10 19:59:46,560] multiqc.modules.busco.busco                        [DEBUG  ]  Could not find any reports in ('37Q',)
+[2023-04-10 19:59:46,562] multiqc.modules.goleft_indexcov.goleft_indexcov    [DEBUG  ]  Did not find goleft indexcov outputs in ('37Q',)
+[2023-04-10 19:59:46,565] multiqc.modules.snpeff.snpeff                      [DEBUG  ]  Could not find any data in ('37Q',)
+[2023-04-10 19:59:46,567] multiqc.modules.gatk.gatk                          [DEBUG  ]  Could not find any reports in ('37Q',)
+[2023-04-10 19:59:46,569] multiqc.modules.htseq.htseq                        [DEBUG  ]  Could not find any reports in ('37Q',)
+[2023-04-10 19:59:46,571] multiqc.modules.bcftools.bcftools                  [DEBUG  ]  Could not find any reports in ('37Q',)
+[2023-04-10 19:59:46,573] multiqc.modules.featureCounts.feature_counts       [DEBUG  ]  Could not find any reports in ('37Q',)
+[2023-04-10 19:59:46,583] multiqc.modules.picard.picard                      [DEBUG  ]  Could not find any reports in ('37Q',)
+[2023-04-10 19:59:46,585] multiqc.modules.prokka.prokka                      [DEBUG  ]  Could not find any Prokka data in ('37Q',)
+[2023-04-10 19:59:46,587] multiqc.modules.samblaster.samblaster              [DEBUG  ]  Could not find any data in ('37Q',)
+[2023-04-10 19:59:46,592] multiqc.modules.samtools.samtools                  [DEBUG  ]  Could not find any reports in ('37Q',)
+[2023-04-10 19:59:46,594] multiqc.modules.bamtools.bamtools                  [DEBUG  ]  Could not find any reports in ('37Q',)
+[2023-04-10 19:59:46,598] multiqc.modules.bismark.bismark                    [DEBUG  ]  Could not find any reports in ('37Q',)
+[2023-04-10 19:59:46,600] multiqc.modules.hicup.hicup                        [DEBUG  ]  Could not find any HiCUP data in ('37Q',)
+[2023-04-10 19:59:46,603] multiqc.modules.salmon.salmon                      [DEBUG  ]  Could not find any Salmon data in ('37Q',)
+[2023-04-10 19:59:46,605] multiqc.modules.kallisto.kallisto                  [DEBUG  ]  Could not find any reports in ('37Q',)
+[2023-04-10 19:59:46,611] multiqc.modules.slamdunk.slamdunk                  [DEBUG  ]  No slamdunk reports found.
+[2023-04-10 19:59:46,614] multiqc.modules.star.star                          [DEBUG  ]  Could not find any reports in ('37Q',)
+[2023-04-10 19:59:46,616] multiqc.modules.tophat.tophat                      [DEBUG  ]  Could not find any reports in ('37Q',)
+[2023-04-10 19:59:46,618] multiqc.modules.bowtie2.bowtie2                    [DEBUG  ]  Could not find any reports in ('37Q',)
+[2023-04-10 19:59:46,620] multiqc.modules.bowtie1.bowtie1                    [DEBUG  ]  Could not find any reports in ('37Q',)
+[2023-04-10 19:59:46,622] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Could not find any reports in ('37Q',)
+[2023-04-10 19:59:46,624] multiqc.modules.trimmomatic.trimmomatic            [DEBUG  ]  Could not find any Trimmomatic data in ('37Q',)
+[2023-04-10 19:59:46,627] multiqc.modules.skewer.skewer                      [DEBUG  ]  Could not find any data in ('37Q',)
+[2023-04-10 19:59:46,628] multiqc.modules.fastq_screen.fastq_screen          [DEBUG  ]  Could not find any reports in ('37Q',)
+[2023-04-10 19:59:47,173] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 16 reports
+[2023-04-10 19:59:48,056] multiqc.modules.clusterflow.clusterflow            [DEBUG  ]  Could not find any reports in ('37Q',)
+[2023-04-10 19:59:48,057] multiqc                                            [INFO   ]  Report      : wyniki/multiqc_report.html
+[2023-04-10 19:59:48,057] multiqc                                            [INFO   ]  Data        : wyniki/multiqc_data
+[2023-04-10 19:59:48,057] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpr4ITK7/multiqc_data/multiqc_general_stats.txt' to 'wyniki/multiqc_data'
+[2023-04-10 19:59:48,058] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpr4ITK7/multiqc_data/multiqc_sources.txt' to 'wyniki/multiqc_data'
+[2023-04-10 19:59:48,058] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpr4ITK7/multiqc_data/multiqc_fastqc.txt' to 'wyniki/multiqc_data'
+[2023-04-10 19:59:48,118] multiqc                                            [INFO   ]  MultiQC complete
