@@ -52,10 +52,10 @@ Bioinformatical tools are installed via conda. To use them conda must be initiat
   java -jar trimmomatic-0.39.jar \
       PE \
       $HOME/ATAC_seq/fastqs/3-UJ-ATACseq_S22_L003_R1_001.fastq.gz \
-      $HOME/ATAC_seq/fastqs/3-UJ-ATACseq_S22_L003_R1_001.fastq.gz \
+      $HOME/ATAC_seq/fastqs/3-UJ-ATACseq_S22_L003_R2_001.fastq.gz \
       $HOME/paired/3-UJ-ATACseq_S22_L003_R1_001.fq.gz \
-      $HOME/unpaired/3-UJ-ATACseq_S22_L003_R1_001.fq.gz \
-      $HOME/paired/3-UJ-ATACseq_S22_L003_R2_001.fq.gz \
+      $HOME/unpaired/3-UJ-ATACseq_S22_L003_R2_001.fq.gz \
+      $HOME/paired/3-UJ-ATACseq_S22_L003_R1_001.fq.gz \
       $HOME/unpaired/3-UJ-ATACseq_S22_L003_R2_001.fq.gz \
       ILLUMINACLIP:TruSeq3-PE.fa:2:30:10:2:True \
       SLIDINGWINDOW:4:20 \
