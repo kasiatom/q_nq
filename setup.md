@@ -34,6 +34,36 @@ Bioinformatical tools are installed via conda. To use them conda must be initiat
   git pull
   ```
 
+  ### Trimmomatic (instalation and usage)
+  Instalation:  
+  ```bash
+  wget http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-0.39.zip
+  unzip Trimmomatic-0.39.zip
+  mkdir $HOME/trimmomatic
+  mv Trimmomatic-0.39/trimmomatic-0.39.jar $HOME/trimmomatic
+  mv Trimmomatic-0.39/adapters/* $HOME/trimmomatic
+  ```
+  To run the program (here for the 3-UJ-ATACseq_S22_L003_R1_001.fastq.gz and 3-UJ-ATACseq_S22_L003_R2_001.fastq.gz pair):  
+  ```bash
+  mkdir $HOME/paired
+  mkdir $HOME/unpaired
+  cd $HOME/trimmomatic
+
+  java -jar trimmomatic-0.39.jar \
+      PE \
+      $HOME/ATAC_seq/fastqs/3-UJ-ATACseq_S22_L003_R1_001.fastq.gz \
+      $HOME/ATAC_seq/fastqs/3-UJ-ATACseq_S22_L003_R2_001.fastq.gz \
+      $HOME/paired/3-UJ-ATACseq_S22_L003_R1_001.fq.gz \
+      $HOME/unpaired/3-UJ-ATACseq_S22_L003_R2_001.fq.gz \
+      $HOME/paired/3-UJ-ATACseq_S22_L003_R1_001.fq.gz \
+      $HOME/unpaired/3-UJ-ATACseq_S22_L003_R2_001.fq.gz \
+      ILLUMINACLIP:TruSeq3-PE.fa:2:30:10:2:True \
+      SLIDINGWINDOW:4:20 \
+      MINLEN:50
+
+ ```
+ Interesting (trimmed files) will be in the `$HOME/paired` folder
+
 ### Screen 
 Use screen (virtual terminal) to run a long-lasting processes (like alignment or variant calling).
  * Create new screen session:
