@@ -1,0 +1,53 @@
+[2023-05-02 21:58:09,057] multiqc                                            [DEBUG  ]  No MultiQC config found: /home/mikolaj.radosz/.conda/envs/fastqc/lib/python2.7/site-packages/multiqc-1.0.dev0-py2.7.egg/multiqc_config.yaml
+[2023-05-02 21:58:09,057] multiqc                                            [DEBUG  ]  No MultiQC config found: /home/mikolaj.radosz/.multiqc_config.yaml
+[2023-05-02 21:58:09,057] multiqc                                            [DEBUG  ]  No MultiQC config found: multiqc_config.yaml
+[2023-05-02 21:58:09,057] multiqc                                            [DEBUG  ]  Command used: /home/mikolaj.radosz/.conda/envs/fastqc/bin/multiqc t02 -o wyniki50
+[2023-05-02 21:58:09,057] multiqc                                            [DEBUG  ]  Could not connect to multiqc.info for version check
+[2023-05-02 21:58:09,057] multiqc                                            [INFO   ]  This is MultiQC v1.0.dev0
+[2023-05-02 21:58:09,057] multiqc                                            [DEBUG  ]  Command     : /home/mikolaj.radosz/.conda/envs/fastqc/bin/multiqc t02 -o wyniki50
+[2023-05-02 21:58:09,057] multiqc                                            [DEBUG  ]  Working dir : /home/mikolaj.radosz/paired/wyniki
+[2023-05-02 21:58:09,057] multiqc                                            [INFO   ]  Template    : default
+[2023-05-02 21:58:09,057] multiqc                                            [INFO   ]  Searching 't02'
+[2023-05-02 21:58:09,057] multiqc                                            [DEBUG  ]  Analysing modules: custom_content, peddy, methylQA, qualimap, preseq, quast, rseqc, busco, goleft_indexcov, snpeff, gatk, htseq, bcftools, featureCounts, picard, prokka, samblaster, samtools, bamtools, bismark, hicup, salmon, kallisto, slamdunk, star, tophat, bowtie2, bowtie1, cutadapt, trimmomatic, skewer, fastq_screen, fastqc, clusterflow
+[2023-05-02 21:58:09,057] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /tmp/tmpK12Zsm
+[2023-05-02 21:58:09,269] multiqc.modules.custom_content.custom_content      [DEBUG  ]  No custom content found
+[2023-05-02 21:58:09,273] multiqc.modules.peddy.peddy                        [DEBUG  ]  Could not find any reports in ('t02',)
+[2023-05-02 21:58:09,275] multiqc.modules.methylQA.methylQA                  [DEBUG  ]  Could not find any reports in ('t02',)
+[2023-05-02 21:58:09,276] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Using default Qualimap thresholds: 1, 5, 10, 30, 50
+[2023-05-02 21:58:09,280] multiqc.modules.qualimap.qualimap                  [DEBUG  ]  Could not find any reports in ('t02',)
+[2023-05-02 21:58:09,282] multiqc.modules.preseq.preseq                      [DEBUG  ]  Could not find any preseq data in ('t02',)
+[2023-05-02 21:58:09,284] multiqc.modules.quast.quast                        [DEBUG  ]  Could not find any reports in ('t02',)
+[2023-05-02 21:58:09,292] multiqc.modules.rseqc.rseqc                        [DEBUG  ]  Could not find any reports in ('t02',)
+[2023-05-02 21:58:09,294] multiqc.modules.busco.busco                        [DEBUG  ]  Could not find any reports in ('t02',)
+[2023-05-02 21:58:09,297] multiqc.modules.goleft_indexcov.goleft_indexcov    [DEBUG  ]  Did not find goleft indexcov outputs in ('t02',)
+[2023-05-02 21:58:09,299] multiqc.modules.snpeff.snpeff                      [DEBUG  ]  Could not find any data in ('t02',)
+[2023-05-02 21:58:09,301] multiqc.modules.gatk.gatk                          [DEBUG  ]  Could not find any reports in ('t02',)
+[2023-05-02 21:58:09,303] multiqc.modules.htseq.htseq                        [DEBUG  ]  Could not find any reports in ('t02',)
+[2023-05-02 21:58:09,305] multiqc.modules.bcftools.bcftools                  [DEBUG  ]  Could not find any reports in ('t02',)
+[2023-05-02 21:58:09,307] multiqc.modules.featureCounts.feature_counts       [DEBUG  ]  Could not find any reports in ('t02',)
+[2023-05-02 21:58:09,317] multiqc.modules.picard.picard                      [DEBUG  ]  Could not find any reports in ('t02',)
+[2023-05-02 21:58:09,319] multiqc.modules.prokka.prokka                      [DEBUG  ]  Could not find any Prokka data in ('t02',)
+[2023-05-02 21:58:09,321] multiqc.modules.samblaster.samblaster              [DEBUG  ]  Could not find any data in ('t02',)
+[2023-05-02 21:58:09,326] multiqc.modules.samtools.samtools                  [DEBUG  ]  Could not find any reports in ('t02',)
+[2023-05-02 21:58:09,328] multiqc.modules.bamtools.bamtools                  [DEBUG  ]  Could not find any reports in ('t02',)
+[2023-05-02 21:58:09,332] multiqc.modules.bismark.bismark                    [DEBUG  ]  Could not find any reports in ('t02',)
+[2023-05-02 21:58:09,334] multiqc.modules.hicup.hicup                        [DEBUG  ]  Could not find any HiCUP data in ('t02',)
+[2023-05-02 21:58:09,336] multiqc.modules.salmon.salmon                      [DEBUG  ]  Could not find any Salmon data in ('t02',)
+[2023-05-02 21:58:09,339] multiqc.modules.kallisto.kallisto                  [DEBUG  ]  Could not find any reports in ('t02',)
+[2023-05-02 21:58:09,345] multiqc.modules.slamdunk.slamdunk                  [DEBUG  ]  No slamdunk reports found.
+[2023-05-02 21:58:09,347] multiqc.modules.star.star                          [DEBUG  ]  Could not find any reports in ('t02',)
+[2023-05-02 21:58:09,349] multiqc.modules.tophat.tophat                      [DEBUG  ]  Could not find any reports in ('t02',)
+[2023-05-02 21:58:09,351] multiqc.modules.bowtie2.bowtie2                    [DEBUG  ]  Could not find any reports in ('t02',)
+[2023-05-02 21:58:09,354] multiqc.modules.bowtie1.bowtie1                    [DEBUG  ]  Could not find any reports in ('t02',)
+[2023-05-02 21:58:09,356] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Could not find any reports in ('t02',)
+[2023-05-02 21:58:09,358] multiqc.modules.trimmomatic.trimmomatic            [DEBUG  ]  Could not find any Trimmomatic data in ('t02',)
+[2023-05-02 21:58:09,360] multiqc.modules.skewer.skewer                      [DEBUG  ]  Could not find any data in ('t02',)
+[2023-05-02 21:58:09,362] multiqc.modules.fastq_screen.fastq_screen          [DEBUG  ]  Could not find any reports in ('t02',)
+[2023-05-02 21:58:09,940] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 16 reports
+[2023-05-02 21:58:10,798] multiqc.modules.clusterflow.clusterflow            [DEBUG  ]  Could not find any reports in ('t02',)
+[2023-05-02 21:58:10,799] multiqc                                            [INFO   ]  Report      : wyniki50/multiqc_report.html
+[2023-05-02 21:58:10,800] multiqc                                            [INFO   ]  Data        : wyniki50/multiqc_data
+[2023-05-02 21:58:10,800] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpK12Zsm/multiqc_data/multiqc_general_stats.txt' to 'wyniki50/multiqc_data'
+[2023-05-02 21:58:10,800] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpK12Zsm/multiqc_data/multiqc_sources.txt' to 'wyniki50/multiqc_data'
+[2023-05-02 21:58:10,800] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpK12Zsm/multiqc_data/multiqc_fastqc.txt' to 'wyniki50/multiqc_data'
+[2023-05-02 21:58:10,883] multiqc                                            [INFO   ]  MultiQC complete
