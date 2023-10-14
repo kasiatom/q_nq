@@ -1,0 +1,1 @@
+fastqc-analiza.sh
