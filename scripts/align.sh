@@ -11,20 +11,22 @@ then
 fi   
 
 ## find all sample names (here for raw fastq, but should be for the trimmed ones - after fastp with -r)
-#samples=$( ls $HOME/ATAC_seq/fastqs/*gz | sed "s/-UJ.*//" |  sed 's|.*/||' | sort | uniq)
-samples=127
+samples=$( ls $HOME/ATAC_seq/fastqs/*gz | sed "s/-UJ.*//" |  sed 's|.*/||' | sort | uniq)
+#samples=127
 
 for sample in $samples
 do
    ## for each sample find all fastq1 and save them as list separated with coma
    fastqs1=$(ls $HOME/ATAC_seq/fastqs/"$sample"-UJ*_R1_001.fastq.gz |  tr '\n' ',' | sed 's/,$//')
+   echo $fastqs1
    ## prepare list of fastq2, important: keep the same order as in fastqs1
    fastqs2=$(echo $fastqs1 | sed 's|_R1_|_R2_|g')
+   echo $fastqs2
    ## align reads, reference is in /mnt/qnap/users/kasia.tomala/genome; here symlinked as $HOME/genome
    bowtie2 --very-sensitive-local \
       -x $HOME/genome/R64-1-1 \
       -1 $fastqs1 -2 $fastqs2 -S $HOME/output/"$sample".sam \
-      --rg-id "$sample" --rg "$sample" 2>$HOME/output/"$sample"-alignment-stats.txt
+      --rg-id "$sample" --rg SM:"$sample" --rg PL:illumina 2>$HOME/output/"$sample"-alignment-stats.txt
 
    ## makr duplicates
    gatk MarkDuplicates \
