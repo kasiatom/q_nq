@@ -4,7 +4,7 @@
 set -e -o  pipefail
 
 
-## create output directory - if not present
+### create output directory - if not present
 if [ ! -d $HOME/output ]
 then
    mkdir $HOME/output
