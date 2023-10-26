@@ -1,0 +1,25 @@
+Sample	Bowtie 2_overall_alignment_rate
+127-alignment-stats	39.32
+129-alignment-stats	55.04
+134-alignment-stats	29.45
+136-alignment-stats	33.23
+29-alignment-stats	38.54
+3-alignment-stats	67.93
+30-alignment-stats	44.66
+31-alignment-stats	34.17
+33-alignment-stats	58.37
+34-alignment-stats	52.94
+34Q-alignment-stats	38.57
+35-alignment-stats	24.95
+36-alignment-stats	47.08
+37-alignment-stats	28.09
+37Q-alignment-stats	35.33
+38-alignment-stats	30.14
+39-alignment-stats	63.33
+41-alignment-stats	56.85
+42-alignment-stats	33.57
+45-alignment-stats	42.73
+47-alignment-stats	32.5
+97-alignment-stats	51.71
+BY-alignment-stats	41.94
+t02-alignment-stats	26.55
