@@ -1,6 +1,6 @@
 #!/bin/bash
 
-## find list of all fastq1 files
+### find list of all fastq1 files
 L1=$( find $HOME/fastqs/*R1_001.fastq.gz | awk -F'[/]' '{print $5}' )
 
 for item in $L1
