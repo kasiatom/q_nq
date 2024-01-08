@@ -1,16 +1,18 @@
+
 ##install
-library(BiocManager)
-BiocManager::install(
-	c(
-		"ATACseqQC",
-		"ChIPpeakAnno",
-		"MotifDb",
-		"GenomicAlignments",
-		"BSgenome.Scerevisiae.UCSC.sacCer3",
-		"TxDb.Scerevisiae.UCSC.sacCer3.sgdGene"
-	),
-	force = TRUE
-)
+#library(BiocManager)
+#BiocManager::install(
+#	c(
+#		"ATACseqQC",
+#		"ChIPpeakAnno",
+#		"MotifDb",
+#		"GenomicAlignments",
+#		"BSgenome.Scerevisiae.UCSC.sacCer3"
+#	),
+#	force = TRUE
+#)
+
+#BiocManager::install(c("GenomicFeatures"), force = TRUE)
 
 ## prepare transcript db
 require(GenomicFeatures)
@@ -35,7 +37,7 @@ require(ATACseqQC)
 require(Rsamtools)
 seqinformation <- seqinfo(scer.tx)
 txs <- transcripts(scer.tx)
-bamfiles <- Sys.glob("~/ATACseqQC/*regions.bam")
+bamfiles <- Sys.glob("./*markdup.bam")
 for (bamfile in bamfiles) {
 bamfile.labels <- gsub(".bam", "", basename(bamfile))
 
@@ -49,8 +51,9 @@ par(mar = c(5, 5, 5, 5))
 fragSize <- fragSizeDist(bamfile, bamfile.labels)
 dev.off()
 
-tags <- list(c("integer1"="AS","integer2"="NM", "character1"= "MD", "character2"="PG", "character3" ="RG"))
+tags <- c("integer1"="AS","integer2"="NM", "character1"= "MD", "character2"="PG", "character3" ="RG")
 align <- readBamFile(bamfile, tag=tags, asMates=TRUE, bigFile=TRUE)
+#align <- readBamFile(bamfile, asMates=TRUE, bigFile=TRUE)
 shifted_align <- shiftGAlignmentsList(align, outbam=paste(bamfile.labels, "-shifted.bam", sep =""))
 
 
