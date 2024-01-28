@@ -7,7 +7,7 @@ wget https://www.python.org/ftp/python/3.9.0/Python-3.9.0.tgz
 tar -zxvf Python-3.9.0.tgz
 cd Python-3.9.0/
 mkdir ~/.localpython
-./configure --prefix=/home/mikołaj.radosz/.localpython
+./configure --prefix=$HOME/.localpython
 make
 make install
 ```
