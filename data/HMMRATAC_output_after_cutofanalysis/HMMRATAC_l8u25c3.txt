@@ -1,0 +1,1522 @@
+ [106 MB] 
+# Command line: hmmratac -l 8 -u 25 -c 3 --means 75 170 340 510 --stddevs 15 15 15 15 -i 127-markdup-regions.bam --outdir /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3 -n 127
+# Random seed selected as: 10151
+ 
+ [106 MB] #1 Read fragments from BAMPE file... 
+ [145 MB]  1000000 fragments parsed 
+ [150 MB] 1470171 fragments have been read. 
+ [150 MB] #2 Use EM algorithm to estimate means and stddevs of fragment lengths 
+ [150 MB] #  for mono-, di-, and tri-nucleosomal signals... 
+ [150 MB] # A random seed 10151 has been used in the sampling function 
+ [150 MB] # Downsampled 84267 fragments will be used for EM training... 
+ [150 MB] # Reached convergence after 17 iterations 
+ [150 MB] #  The means and stddevs after EM: 
+ [150 MB] #                         short       mono         di        tri 
+ [150 MB] #             means:         75      175.5      340.9      448.4 
+ [150 MB] #           stddevs:         15       50.8       32.3       25.2 
+ [150 MB] #  Compute the weights for each fragment length for each of the four signal types 
+ [150 MB] #  Generate short, mono-, di-, and tri-nucleosomal signals 
+ [168 MB] #  Pile up all fragments 
+ [176 MB] #  Convert pileup to fold-change over average signal 
+ [176 MB] #3 Look for training set from 1470171 fragments 
+ [176 MB] #  Call peak above within fold-change range of 8 and 25. 
+ [176 MB] #   The minimum length of the region is set as the average template/fragment length in the dataset: 143 
+ [176 MB] #   The maximum gap to merge nearby significant regions is set as the flanking size to extend training regions: 1000 
+ [179 MB] #  Total training regions called after applying the lower cutoff 8: 197 
+ [179 MB] #  Total training regions after filtering with upper cutoff 25: 193 
+ [179 MB] #  **IMPORTANT** 
+ [179 MB] #  Please review the cutoff analysis result in /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/127_cutoff_analysis.tsv to verify 
+ [179 MB] #   if the choices of lower, upper and prescanning cutoff are appropriate. 
+ [179 MB] #   Please read the message in the section 'Choices of cutoff values' by running 
+ [179 MB] #   `macs3 hmmratac -h` for detail. 
+ [179 MB] #  **** 
+ [196 MB] #  We expand the training regions with 1000 basepairs and merge overlap 
+ [196 MB] #4 Train Hidden Markov Model with Multivariate Gaussian Emission 
+ [196 MB] #  Extract signals in training regions with bin size of 10 
+ [203 MB] #  Use Baum-Welch algorithm to train the HMM 
+ [203 MB] #   HMM converged: True 
+ [203 MB] #  Write HMM parameters into JSON: /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/127_model.json 
+ [203 MB] #  The Hidden Markov Model for signals of binsize of 10 basepairs: 
+ [203 MB] #   open state index: state2 
+ [203 MB] #   nucleosomal state index: state0 
+ [203 MB] #   background state index: state1 
+ [203 MB] #   Starting probabilities of states: 
+ [203 MB] #                           nuc         bg       open 
+ [203 MB] #                        0.0814     0.9186  4.509e-20 
+ [203 MB] #   HMM Transition probabilities: 
+ [203 MB] #                           nuc         bg       open 
+ [203 MB] #              nuc->      0.962    0.01935    0.01865 
+ [203 MB] #               bg->    0.01207     0.9878  9.832e-05 
+ [203 MB] #             open->    0.02043  2.163e-09     0.9796 
+ [203 MB] #   HMM Emissions (mean):  
+ [203 MB] #                         short       mono         di        tri 
+ [203 MB] #              nuc:       9.173      29.99      11.94      3.915 
+ [203 MB] #               bg:       2.414        8.3       3.48      1.216 
+ [203 MB] #             open:       40.92      99.92      26.19      5.241 
+ [203 MB] #5 Decode with Viterbi to predict states 
+ [203 MB] #5  Total candidate peaks : 702 
+ [203 MB] #  We expand the candidate regions with 1000 and merge overlap 
+ [203 MB] #  Extract signals in candidate regions and decode with HMM 
+ [203 MB] #  Use HMM to predict states 
+ [203 MB] #    decoding 1000... 
+ [301 MB] # Write the output... 
+ [301 MB] # Write accessible regions in a gappedPeak file: 127_accessible_regions.gappedPeak 
+ [105 MB] 
+# Command line: hmmratac -l 8 -u 25 -c 3 --means 75 170 340 510 --stddevs 15 15 15 15 -i 129-markdup-regions.bam --outdir /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3 -n 129
+# Random seed selected as: 10151
+ 
+ [105 MB] #1 Read fragments from BAMPE file... 
+ [141 MB]  1000000 fragments parsed 
+ [150 MB]  2000000 fragments parsed 
+ [150 MB] 2037717 fragments have been read. 
+ [150 MB] #2 Use EM algorithm to estimate means and stddevs of fragment lengths 
+ [150 MB] #  for mono-, di-, and tri-nucleosomal signals... 
+ [150 MB] # A random seed 10151 has been used in the sampling function 
+ [150 MB] # Downsampled 103207 fragments will be used for EM training... 
+ [150 MB] # Reached convergence after 14 iterations 
+ [150 MB] #  The means and stddevs after EM: 
+ [150 MB] #                         short       mono         di        tri 
+ [150 MB] #             means:         75      180.9      353.4      460.9 
+ [150 MB] #           stddevs:         15         53       34.9       20.6 
+ [150 MB] #  Compute the weights for each fragment length for each of the four signal types 
+ [150 MB] #  Generate short, mono-, di-, and tri-nucleosomal signals 
+ [182 MB] #  Pile up all fragments 
+ [182 MB] #  Convert pileup to fold-change over average signal 
+ [182 MB] #3 Look for training set from 2037717 fragments 
+ [182 MB] #  Call peak above within fold-change range of 8 and 25. 
+ [182 MB] #   The minimum length of the region is set as the average template/fragment length in the dataset: 138 
+ [182 MB] #   The maximum gap to merge nearby significant regions is set as the flanking size to extend training regions: 1000 
+ [184 MB] #  Total training regions called after applying the lower cutoff 8: 127 
+ [184 MB] #  Total training regions after filtering with upper cutoff 25: 123 
+ [184 MB] #  **IMPORTANT** 
+ [184 MB] #  Please review the cutoff analysis result in /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/129_cutoff_analysis.tsv to verify 
+ [184 MB] #   if the choices of lower, upper and prescanning cutoff are appropriate. 
+ [184 MB] #   Please read the message in the section 'Choices of cutoff values' by running 
+ [184 MB] #   `macs3 hmmratac -h` for detail. 
+ [184 MB] #  **** 
+ [205 MB] #  We expand the training regions with 1000 basepairs and merge overlap 
+ [205 MB] #4 Train Hidden Markov Model with Multivariate Gaussian Emission 
+ [205 MB] #  Extract signals in training regions with bin size of 10 
+ [205 MB] #  Use Baum-Welch algorithm to train the HMM 
+ [205 MB] #   HMM converged: True 
+ [205 MB] #  Write HMM parameters into JSON: /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/129_model.json 
+ [205 MB] #  The Hidden Markov Model for signals of binsize of 10 basepairs: 
+ [205 MB] #   open state index: state1 
+ [205 MB] #   nucleosomal state index: state2 
+ [205 MB] #   background state index: state0 
+ [205 MB] #   Starting probabilities of states: 
+ [205 MB] #                            bg       open        nuc 
+ [205 MB] #                        0.8875   0.008259     0.1042 
+ [205 MB] #   HMM Transition probabilities: 
+ [205 MB] #                            bg       open        nuc 
+ [205 MB] #               bg->     0.9895  1.288e-05    0.01047 
+ [205 MB] #             open->  2.585e-05     0.9688    0.03114 
+ [205 MB] #              nuc->    0.01904    0.01767     0.9633 
+ [205 MB] #   HMM Emissions (mean):  
+ [205 MB] #                         short       mono         di        tri 
+ [205 MB] #               bg:       3.183      10.22      5.498      1.601 
+ [205 MB] #             open:       73.78      110.8      26.66      3.511 
+ [205 MB] #              nuc:       20.73      48.04      21.19      5.797 
+ [205 MB] #5 Decode with Viterbi to predict states 
+ [205 MB] #5  Total candidate peaks : 712 
+ [205 MB] #  We expand the candidate regions with 1000 and merge overlap 
+ [205 MB] #  Extract signals in candidate regions and decode with HMM 
+ [205 MB] #  Use HMM to predict states 
+ [205 MB] #    decoding 1000... 
+ [303 MB] # Write the output... 
+ [303 MB] # Write accessible regions in a gappedPeak file: 129_accessible_regions.gappedPeak 
+ [106 MB] 
+# Command line: hmmratac -l 8 -u 25 -c 3 --means 75 170 340 510 --stddevs 15 15 15 15 -i 134-markdup-regions.bam --outdir /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3 -n 134
+# Random seed selected as: 10151
+ 
+ [106 MB] #1 Read fragments from BAMPE file... 
+ [146 MB]  1000000 fragments parsed 
+ [150 MB] 1312559 fragments have been read. 
+ [150 MB] #2 Use EM algorithm to estimate means and stddevs of fragment lengths 
+ [150 MB] #  for mono-, di-, and tri-nucleosomal signals... 
+ [150 MB] # A random seed 10151 has been used in the sampling function 
+ [150 MB] # Downsampled 78327 fragments will be used for EM training... 
+ [150 MB] # Reached maximum number (20) of iterations 
+ [150 MB] #  The means and stddevs after EM: 
+ [150 MB] #                         short       mono         di        tri 
+ [150 MB] #             means:         75        189      355.8      460.6 
+ [150 MB] #           stddevs:         15       57.2       35.6       20.6 
+ [150 MB] #  Compute the weights for each fragment length for each of the four signal types 
+ [150 MB] #  Generate short, mono-, di-, and tri-nucleosomal signals 
+ [165 MB] #  Pile up all fragments 
+ [171 MB] #  Convert pileup to fold-change over average signal 
+ [171 MB] #3 Look for training set from 1312559 fragments 
+ [171 MB] #  Call peak above within fold-change range of 8 and 25. 
+ [171 MB] #   The minimum length of the region is set as the average template/fragment length in the dataset: 165 
+ [171 MB] #   The maximum gap to merge nearby significant regions is set as the flanking size to extend training regions: 1000 
+ [174 MB] #  Total training regions called after applying the lower cutoff 8: 115 
+ [174 MB] #  Total training regions after filtering with upper cutoff 25: 112 
+ [174 MB] #  **IMPORTANT** 
+ [174 MB] #  Please review the cutoff analysis result in /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/134_cutoff_analysis.tsv to verify 
+ [174 MB] #   if the choices of lower, upper and prescanning cutoff are appropriate. 
+ [174 MB] #   Please read the message in the section 'Choices of cutoff values' by running 
+ [174 MB] #   `macs3 hmmratac -h` for detail. 
+ [174 MB] #  **** 
+ [189 MB] #  We expand the training regions with 1000 basepairs and merge overlap 
+ [189 MB] #4 Train Hidden Markov Model with Multivariate Gaussian Emission 
+ [189 MB] #  Extract signals in training regions with bin size of 10 
+ [189 MB] #  Use Baum-Welch algorithm to train the HMM 
+ [189 MB] #   HMM converged: True 
+ [189 MB] #  Write HMM parameters into JSON: /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/134_model.json 
+ [189 MB] #  The Hidden Markov Model for signals of binsize of 10 basepairs: 
+ [189 MB] #   open state index: state2 
+ [189 MB] #   nucleosomal state index: state1 
+ [189 MB] #   background state index: state0 
+ [189 MB] #   Starting probabilities of states: 
+ [189 MB] #                            bg        nuc       open 
+ [189 MB] #                        0.9515    0.04845  1.418e-05 
+ [189 MB] #   HMM Transition probabilities: 
+ [189 MB] #                            bg        nuc       open 
+ [189 MB] #               bg->     0.9877    0.01223  9.135e-05 
+ [189 MB] #              nuc->    0.01773     0.9666    0.01567 
+ [189 MB] #             open->   2.44e-06    0.03154     0.9685 
+ [189 MB] #   HMM Emissions (mean):  
+ [189 MB] #                         short       mono         di        tri 
+ [189 MB] #               bg:       2.044      7.719      5.264      1.835 
+ [189 MB] #              nuc:        13.3      37.43      24.26      7.924 
+ [189 MB] #             open:       43.28      92.57      39.08      7.002 
+ [189 MB] #5 Decode with Viterbi to predict states 
+ [190 MB] #5  Total candidate peaks : 489 
+ [190 MB] #  We expand the candidate regions with 1000 and merge overlap 
+ [190 MB] #  Extract signals in candidate regions and decode with HMM 
+ [190 MB] #  Use HMM to predict states 
+ [190 MB] #    decoding 1000... 
+ [256 MB] # Write the output... 
+ [256 MB] # Write accessible regions in a gappedPeak file: 134_accessible_regions.gappedPeak 
+ [105 MB] 
+# Command line: hmmratac -l 8 -u 25 -c 3 --means 75 170 340 510 --stddevs 15 15 15 15 -i 136-markdup-regions.bam --outdir /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3 -n 136
+# Random seed selected as: 10151
+ 
+ [105 MB] #1 Read fragments from BAMPE file... 
+ [144 MB]  1000000 fragments parsed 
+ [147 MB] 1501968 fragments have been read. 
+ [147 MB] #2 Use EM algorithm to estimate means and stddevs of fragment lengths 
+ [147 MB] #  for mono-, di-, and tri-nucleosomal signals... 
+ [147 MB] # A random seed 10151 has been used in the sampling function 
+ [147 MB] # Downsampled 79059 fragments will be used for EM training... 
+ [147 MB] # Reached maximum number (20) of iterations 
+ [147 MB] #  The means and stddevs after EM: 
+ [147 MB] #                         short       mono         di        tri 
+ [147 MB] #             means:         75      176.7      343.9      454.8 
+ [147 MB] #           stddevs:         15       51.5       34.9       21.1 
+ [147 MB] #  Compute the weights for each fragment length for each of the four signal types 
+ [147 MB] #  Generate short, mono-, di-, and tri-nucleosomal signals 
+ [170 MB] #  Pile up all fragments 
+ [175 MB] #  Convert pileup to fold-change over average signal 
+ [175 MB] #3 Look for training set from 1501968 fragments 
+ [175 MB] #  Call peak above within fold-change range of 8 and 25. 
+ [175 MB] #   The minimum length of the region is set as the average template/fragment length in the dataset: 139 
+ [175 MB] #   The maximum gap to merge nearby significant regions is set as the flanking size to extend training regions: 1000 
+ [178 MB] #  Total training regions called after applying the lower cutoff 8: 180 
+ [178 MB] #  Total training regions after filtering with upper cutoff 25: 175 
+ [178 MB] #  **IMPORTANT** 
+ [178 MB] #  Please review the cutoff analysis result in /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/136_cutoff_analysis.tsv to verify 
+ [178 MB] #   if the choices of lower, upper and prescanning cutoff are appropriate. 
+ [178 MB] #   Please read the message in the section 'Choices of cutoff values' by running 
+ [178 MB] #   `macs3 hmmratac -h` for detail. 
+ [178 MB] #  **** 
+ [195 MB] #  We expand the training regions with 1000 basepairs and merge overlap 
+ [195 MB] #4 Train Hidden Markov Model with Multivariate Gaussian Emission 
+ [195 MB] #  Extract signals in training regions with bin size of 10 
+ [200 MB] #  Use Baum-Welch algorithm to train the HMM 
+ [200 MB] #   HMM converged: True 
+ [200 MB] #  Write HMM parameters into JSON: /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/136_model.json 
+ [200 MB] #  The Hidden Markov Model for signals of binsize of 10 basepairs: 
+ [200 MB] #   open state index: state1 
+ [200 MB] #   nucleosomal state index: state2 
+ [200 MB] #   background state index: state0 
+ [200 MB] #   Starting probabilities of states: 
+ [200 MB] #                            bg       open        nuc 
+ [200 MB] #                        0.9878    0.01185  0.0003339 
+ [200 MB] #   HMM Transition probabilities: 
+ [200 MB] #                            bg       open        nuc 
+ [200 MB] #               bg->     0.9883  1.608e-07    0.01171 
+ [200 MB] #             open->  3.622e-05     0.9723    0.02768 
+ [200 MB] #              nuc->    0.01519    0.01612     0.9687 
+ [200 MB] #   HMM Emissions (mean):  
+ [200 MB] #                         short       mono         di        tri 
+ [200 MB] #               bg:       2.787      8.517      4.646     0.9779 
+ [200 MB] #             open:          52      92.33      24.91      3.193 
+ [200 MB] #              nuc:       15.13      37.56      16.62      3.726 
+ [200 MB] #5 Decode with Viterbi to predict states 
+ [200 MB] #5  Total candidate peaks : 716 
+ [200 MB] #  We expand the candidate regions with 1000 and merge overlap 
+ [200 MB] #  Extract signals in candidate regions and decode with HMM 
+ [200 MB] #  Use HMM to predict states 
+ [200 MB] #    decoding 1000... 
+ [298 MB] # Write the output... 
+ [298 MB] # Write accessible regions in a gappedPeak file: 136_accessible_regions.gappedPeak 
+ [105 MB] 
+# Command line: hmmratac -l 8 -u 25 -c 3 --means 75 170 340 510 --stddevs 15 15 15 15 -i 29-markdup-regions.bam --outdir /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3 -n 29
+# Random seed selected as: 10151
+ 
+ [105 MB] #1 Read fragments from BAMPE file... 
+ [145 MB]  1000000 fragments parsed 
+ [154 MB]  2000000 fragments parsed 
+ [154 MB] 2046468 fragments have been read. 
+ [154 MB] #2 Use EM algorithm to estimate means and stddevs of fragment lengths 
+ [154 MB] #  for mono-, di-, and tri-nucleosomal signals... 
+ [154 MB] # A random seed 10151 has been used in the sampling function 
+ [154 MB] # Downsampled 125049 fragments will be used for EM training... 
+ [154 MB] # Reached maximum number (20) of iterations 
+ [154 MB] #  The means and stddevs after EM: 
+ [154 MB] #                         short       mono         di        tri 
+ [154 MB] #             means:         75      179.8        355      461.2 
+ [154 MB] #           stddevs:         15         56       36.5         20 
+ [154 MB] #  Compute the weights for each fragment length for each of the four signal types 
+ [154 MB] #  Generate short, mono-, di-, and tri-nucleosomal signals 
+ [172 MB] #  Pile up all fragments 
+ [172 MB] #  Convert pileup to fold-change over average signal 
+ [172 MB] #3 Look for training set from 2046468 fragments 
+ [172 MB] #  Call peak above within fold-change range of 8 and 25. 
+ [172 MB] #   The minimum length of the region is set as the average template/fragment length in the dataset: 160 
+ [172 MB] #   The maximum gap to merge nearby significant regions is set as the flanking size to extend training regions: 1000 
+ [172 MB] #  Total training regions called after applying the lower cutoff 8: 253 
+ [172 MB] #  Total training regions after filtering with upper cutoff 25: 213 
+ [172 MB] #  **IMPORTANT** 
+ [172 MB] #  Please review the cutoff analysis result in /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/29_cutoff_analysis.tsv to verify 
+ [172 MB] #   if the choices of lower, upper and prescanning cutoff are appropriate. 
+ [172 MB] #   Please read the message in the section 'Choices of cutoff values' by running 
+ [172 MB] #   `macs3 hmmratac -h` for detail. 
+ [172 MB] #  **** 
+ [172 MB] #  We expand the training regions with 1000 basepairs and merge overlap 
+ [172 MB] #4 Train Hidden Markov Model with Multivariate Gaussian Emission 
+ [172 MB] #  Extract signals in training regions with bin size of 10 
+ [188 MB] #  Use Baum-Welch algorithm to train the HMM 
+ [188 MB] #   HMM converged: True 
+ [188 MB] #  Write HMM parameters into JSON: /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/29_model.json 
+ [188 MB] #  The Hidden Markov Model for signals of binsize of 10 basepairs: 
+ [188 MB] #   open state index: state1 
+ [188 MB] #   nucleosomal state index: state2 
+ [188 MB] #   background state index: state0 
+ [188 MB] #   Starting probabilities of states: 
+ [188 MB] #                            bg       open        nuc 
+ [188 MB] #                        0.9557  3.328e-29    0.04426 
+ [188 MB] #   HMM Transition probabilities: 
+ [188 MB] #                            bg       open        nuc 
+ [188 MB] #               bg->     0.9904  3.665e-05   0.009611 
+ [188 MB] #             open->  2.909e-12     0.9735    0.02647 
+ [188 MB] #              nuc->    0.01798    0.01816     0.9639 
+ [188 MB] #   HMM Emissions (mean):  
+ [188 MB] #                         short       mono         di        tri 
+ [188 MB] #               bg:       1.986      6.522      4.254       1.43 
+ [188 MB] #             open:       68.55      162.3      61.24      13.14 
+ [188 MB] #              nuc:        14.7      45.31      25.74      8.815 
+ [188 MB] #5 Decode with Viterbi to predict states 
+ [188 MB] #5  Total candidate peaks : 571 
+ [188 MB] #  We expand the candidate regions with 1000 and merge overlap 
+ [188 MB] #  Extract signals in candidate regions and decode with HMM 
+ [188 MB] #  Use HMM to predict states 
+ [188 MB] #    decoding 1000... 
+ [274 MB] # Write the output... 
+ [274 MB] # Write accessible regions in a gappedPeak file: 29_accessible_regions.gappedPeak 
+ [106 MB] 
+# Command line: hmmratac -l 8 -u 25 -c 3 --means 75 170 340 510 --stddevs 15 15 15 15 -i 3-markdup-regions.bam --outdir /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3 -n 3
+# Random seed selected as: 10151
+ 
+ [106 MB] #1 Read fragments from BAMPE file... 
+ [144 MB]  1000000 fragments parsed 
+ [154 MB]  2000000 fragments parsed 
+ [162 MB]  3000000 fragments parsed 
+ [168 MB] 3536975 fragments have been read. 
+ [168 MB] #2 Use EM algorithm to estimate means and stddevs of fragment lengths 
+ [168 MB] #  for mono-, di-, and tri-nucleosomal signals... 
+ [168 MB] # A random seed 10151 has been used in the sampling function 
+ [168 MB] # Downsampled 208800 fragments will be used for EM training... 
+ [168 MB] # Reached maximum number (20) of iterations 
+ [168 MB] #  The means and stddevs after EM: 
+ [168 MB] #                         short       mono         di        tri 
+ [168 MB] #             means:         75      172.4      341.2      449.8 
+ [168 MB] #           stddevs:         15       51.8       35.5       23.3 
+ [168 MB] #  Compute the weights for each fragment length for each of the four signal types 
+ [168 MB] #  Generate short, mono-, di-, and tri-nucleosomal signals 
+ [217 MB] #  Pile up all fragments 
+ [217 MB] #  Convert pileup to fold-change over average signal 
+ [217 MB] #3 Look for training set from 3536975 fragments 
+ [217 MB] #  Call peak above within fold-change range of 8 and 25. 
+ [217 MB] #   The minimum length of the region is set as the average template/fragment length in the dataset: 148 
+ [217 MB] #   The maximum gap to merge nearby significant regions is set as the flanking size to extend training regions: 1000 
+ [217 MB] #  Total training regions called after applying the lower cutoff 8: 253 
+ [217 MB] #  Total training regions after filtering with upper cutoff 25: 232 
+ [217 MB] #  **IMPORTANT** 
+ [217 MB] #  Please review the cutoff analysis result in /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/3_cutoff_analysis.tsv to verify 
+ [217 MB] #   if the choices of lower, upper and prescanning cutoff are appropriate. 
+ [217 MB] #   Please read the message in the section 'Choices of cutoff values' by running 
+ [217 MB] #   `macs3 hmmratac -h` for detail. 
+ [217 MB] #  **** 
+ [237 MB] #  We expand the training regions with 1000 basepairs and merge overlap 
+ [237 MB] #4 Train Hidden Markov Model with Multivariate Gaussian Emission 
+ [237 MB] #  Extract signals in training regions with bin size of 10 
+ [245 MB] #  Use Baum-Welch algorithm to train the HMM 
+ [245 MB] #   HMM converged: True 
+ [245 MB] #  Write HMM parameters into JSON: /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/3_model.json 
+ [245 MB] #  The Hidden Markov Model for signals of binsize of 10 basepairs: 
+ [245 MB] #   open state index: state2 
+ [245 MB] #   nucleosomal state index: state1 
+ [245 MB] #   background state index: state0 
+ [245 MB] #   Starting probabilities of states: 
+ [245 MB] #                            bg        nuc       open 
+ [245 MB] #                        0.9256    0.06923   0.005204 
+ [245 MB] #   HMM Transition probabilities: 
+ [245 MB] #                            bg        nuc       open 
+ [245 MB] #               bg->     0.9895    0.01054  1.891e-25 
+ [245 MB] #              nuc->    0.01906     0.9624    0.01852 
+ [245 MB] #             open->  3.935e-07    0.02019     0.9798 
+ [245 MB] #   HMM Emissions (mean):  
+ [245 MB] #                         short       mono         di        tri 
+ [245 MB] #               bg:       3.189      12.18      7.549      2.848 
+ [245 MB] #              nuc:       20.24       64.8      35.81      12.67 
+ [245 MB] #             open:       113.4      253.5      80.43       16.5 
+ [245 MB] #5 Decode with Viterbi to predict states 
+ [245 MB] #5  Total candidate peaks : 699 
+ [245 MB] #  We expand the candidate regions with 1000 and merge overlap 
+ [245 MB] #  Extract signals in candidate regions and decode with HMM 
+ [245 MB] #  Use HMM to predict states 
+ [245 MB] #    decoding 1000... 
+ [336 MB] # Write the output... 
+ [336 MB] # Write accessible regions in a gappedPeak file: 3_accessible_regions.gappedPeak 
+ [105 MB] 
+# Command line: hmmratac -l 8 -u 25 -c 3 --means 75 170 340 510 --stddevs 15 15 15 15 -i 30-markdup-regions.bam --outdir /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3 -n 30
+# Random seed selected as: 10151
+ 
+ [105 MB] #1 Read fragments from BAMPE file... 
+ [146 MB]  1000000 fragments parsed 
+ [146 MB] 1784604 fragments have been read. 
+ [146 MB] #2 Use EM algorithm to estimate means and stddevs of fragment lengths 
+ [146 MB] #  for mono-, di-, and tri-nucleosomal signals... 
+ [146 MB] # A random seed 10151 has been used in the sampling function 
+ [146 MB] # Downsampled 94490 fragments will be used for EM training... 
+ [146 MB] # Reached convergence after 20 iterations 
+ [146 MB] # Reached maximum number (20) of iterations 
+ [146 MB] #  The means and stddevs after EM: 
+ [146 MB] #                         short       mono         di        tri 
+ [146 MB] #             means:         75      177.4      355.4      462.8 
+ [146 MB] #           stddevs:         15         55         36       20.3 
+ [146 MB] #  Compute the weights for each fragment length for each of the four signal types 
+ [146 MB] #  Generate short, mono-, di-, and tri-nucleosomal signals 
+ [167 MB] #  Pile up all fragments 
+ [167 MB] #  Convert pileup to fold-change over average signal 
+ [167 MB] #3 Look for training set from 1784604 fragments 
+ [167 MB] #  Call peak above within fold-change range of 8 and 25. 
+ [167 MB] #   The minimum length of the region is set as the average template/fragment length in the dataset: 143 
+ [167 MB] #   The maximum gap to merge nearby significant regions is set as the flanking size to extend training regions: 1000 
+ [167 MB] #  Total training regions called after applying the lower cutoff 8: 304 
+ [167 MB] #  Total training regions after filtering with upper cutoff 25: 292 
+ [167 MB] #  **IMPORTANT** 
+ [167 MB] #  Please review the cutoff analysis result in /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/30_cutoff_analysis.tsv to verify 
+ [167 MB] #   if the choices of lower, upper and prescanning cutoff are appropriate. 
+ [167 MB] #   Please read the message in the section 'Choices of cutoff values' by running 
+ [167 MB] #   `macs3 hmmratac -h` for detail. 
+ [167 MB] #  **** 
+ [180 MB] #  We expand the training regions with 1000 basepairs and merge overlap 
+ [180 MB] #4 Train Hidden Markov Model with Multivariate Gaussian Emission 
+ [180 MB] #  Extract signals in training regions with bin size of 10 
+ [205 MB] #  Use Baum-Welch algorithm to train the HMM 
+ [205 MB] #   HMM converged: True 
+ [205 MB] #  Write HMM parameters into JSON: /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/30_model.json 
+ [205 MB] #  The Hidden Markov Model for signals of binsize of 10 basepairs: 
+ [205 MB] #   open state index: state2 
+ [205 MB] #   nucleosomal state index: state1 
+ [205 MB] #   background state index: state0 
+ [205 MB] #   Starting probabilities of states: 
+ [205 MB] #                            bg        nuc       open 
+ [205 MB] #                        0.9445    0.04865   0.006816 
+ [205 MB] #   HMM Transition probabilities: 
+ [205 MB] #                            bg        nuc       open 
+ [205 MB] #               bg->     0.9906    0.00875  0.0006213 
+ [205 MB] #              nuc->    0.01691     0.9708    0.01231 
+ [205 MB] #             open->   0.001442    0.02178     0.9768 
+ [205 MB] #   HMM Emissions (mean):  
+ [205 MB] #                         short       mono         di        tri 
+ [205 MB] #               bg:       1.963        5.8      3.709      1.186 
+ [205 MB] #              nuc:       38.38      69.76      18.37      3.522 
+ [205 MB] #             open:       32.56      78.23      40.14      11.18 
+ [205 MB] #5 Decode with Viterbi to predict states 
+ [205 MB] #5  Total candidate peaks : 786 
+ [205 MB] #  We expand the candidate regions with 1000 and merge overlap 
+ [205 MB] #  Extract signals in candidate regions and decode with HMM 
+ [205 MB] #  Use HMM to predict states 
+ [205 MB] #    decoding 1000... 
+ [315 MB] # Write the output... 
+ [315 MB] # Write accessible regions in a gappedPeak file: 30_accessible_regions.gappedPeak 
+ [105 MB] 
+# Command line: hmmratac -l 8 -u 25 -c 3 --means 75 170 340 510 --stddevs 15 15 15 15 -i 31-markdup-regions.bam --outdir /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3 -n 31
+# Random seed selected as: 10151
+ 
+ [105 MB] #1 Read fragments from BAMPE file... 
+ [144 MB]  1000000 fragments parsed 
+ [144 MB] 1002539 fragments have been read. 
+ [144 MB] #2 Use EM algorithm to estimate means and stddevs of fragment lengths 
+ [144 MB] #  for mono-, di-, and tri-nucleosomal signals... 
+ [144 MB] # A random seed 10151 has been used in the sampling function 
+ [144 MB] # Downsampled 56667 fragments will be used for EM training... 
+ [144 MB] # Reached maximum number (20) of iterations 
+ [144 MB] #  The means and stddevs after EM: 
+ [144 MB] #                         short       mono         di        tri 
+ [144 MB] #             means:         75      181.6      357.1      456.6 
+ [144 MB] #           stddevs:         15       57.2         33       22.1 
+ [144 MB] #  Compute the weights for each fragment length for each of the four signal types 
+ [144 MB] #  Generate short, mono-, di-, and tri-nucleosomal signals 
+ [159 MB] #  Pile up all fragments 
+ [159 MB] #  Convert pileup to fold-change over average signal 
+ [159 MB] #3 Look for training set from 1002539 fragments 
+ [159 MB] #  Call peak above within fold-change range of 8 and 25. 
+ [159 MB] #   The minimum length of the region is set as the average template/fragment length in the dataset: 151 
+ [159 MB] #   The maximum gap to merge nearby significant regions is set as the flanking size to extend training regions: 1000 
+ [159 MB] #  Total training regions called after applying the lower cutoff 8: 250 
+ [159 MB] #  Total training regions after filtering with upper cutoff 25: 195 
+ [159 MB] #  **IMPORTANT** 
+ [159 MB] #  Please review the cutoff analysis result in /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/31_cutoff_analysis.tsv to verify 
+ [159 MB] #   if the choices of lower, upper and prescanning cutoff are appropriate. 
+ [159 MB] #   Please read the message in the section 'Choices of cutoff values' by running 
+ [159 MB] #   `macs3 hmmratac -h` for detail. 
+ [159 MB] #  **** 
+ [159 MB] #  We expand the training regions with 1000 basepairs and merge overlap 
+ [159 MB] #4 Train Hidden Markov Model with Multivariate Gaussian Emission 
+ [159 MB] #  Extract signals in training regions with bin size of 10 
+ [172 MB] #  Use Baum-Welch algorithm to train the HMM 
+ [172 MB] #   HMM converged: True 
+ [172 MB] #  Write HMM parameters into JSON: /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/31_model.json 
+ [172 MB] #  The Hidden Markov Model for signals of binsize of 10 basepairs: 
+ [172 MB] #   open state index: state1 
+ [172 MB] #   nucleosomal state index: state0 
+ [172 MB] #   background state index: state2 
+ [172 MB] #   Starting probabilities of states: 
+ [172 MB] #                           nuc       open         bg 
+ [172 MB] #                       0.04445  9.834e-26     0.9555 
+ [172 MB] #   HMM Transition probabilities: 
+ [172 MB] #                           nuc       open         bg 
+ [172 MB] #              nuc->     0.9664    0.01629    0.01736 
+ [172 MB] #             open->    0.02049     0.9795  2.457e-27 
+ [172 MB] #               bg->    0.01088  4.427e-05     0.9891 
+ [172 MB] #   HMM Emissions (mean):  
+ [172 MB] #                         short       mono         di        tri 
+ [172 MB] #              nuc:       5.582      15.92        7.8      2.954 
+ [172 MB] #             open:       31.12      68.93         23      6.968 
+ [172 MB] #               bg:      0.8674      2.535      1.381     0.4832 
+ [172 MB] #5 Decode with Viterbi to predict states 
+ [172 MB] #5  Total candidate peaks : 589 
+ [172 MB] #  We expand the candidate regions with 1000 and merge overlap 
+ [172 MB] #  Extract signals in candidate regions and decode with HMM 
+ [172 MB] #  Use HMM to predict states 
+ [172 MB] #    decoding 1000... 
+ [253 MB] # Write the output... 
+ [253 MB] # Write accessible regions in a gappedPeak file: 31_accessible_regions.gappedPeak 
+ [106 MB] 
+# Command line: hmmratac -l 8 -u 25 -c 3 --means 75 170 340 510 --stddevs 15 15 15 15 -i 33-markdup-regions.bam --outdir /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3 -n 33
+# Random seed selected as: 10151
+ 
+ [106 MB] #1 Read fragments from BAMPE file... 
+ [145 MB]  1000000 fragments parsed 
+ [156 MB]  2000000 fragments parsed 
+ [156 MB] 2310860 fragments have been read. 
+ [156 MB] #2 Use EM algorithm to estimate means and stddevs of fragment lengths 
+ [156 MB] #  for mono-, di-, and tri-nucleosomal signals... 
+ [156 MB] # A random seed 10151 has been used in the sampling function 
+ [157 MB] # Downsampled 151941 fragments will be used for EM training... 
+ [157 MB] # Reached maximum number (20) of iterations 
+ [157 MB] #  The means and stddevs after EM: 
+ [157 MB] #                         short       mono         di        tri 
+ [157 MB] #             means:         75      177.3      341.6      454.2 
+ [157 MB] #           stddevs:         15       52.4       37.5         23 
+ [157 MB] #  Compute the weights for each fragment length for each of the four signal types 
+ [157 MB] #  Generate short, mono-, di-, and tri-nucleosomal signals 
+ [183 MB] #  Pile up all fragments 
+ [183 MB] #  Convert pileup to fold-change over average signal 
+ [183 MB] #3 Look for training set from 2310860 fragments 
+ [183 MB] #  Call peak above within fold-change range of 8 and 25. 
+ [183 MB] #   The minimum length of the region is set as the average template/fragment length in the dataset: 167 
+ [183 MB] #   The maximum gap to merge nearby significant regions is set as the flanking size to extend training regions: 1000 
+ [183 MB] #  Total training regions called after applying the lower cutoff 8: 196 
+ [183 MB] #  Total training regions after filtering with upper cutoff 25: 158 
+ [183 MB] #  **IMPORTANT** 
+ [183 MB] #  Please review the cutoff analysis result in /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/33_cutoff_analysis.tsv to verify 
+ [183 MB] #   if the choices of lower, upper and prescanning cutoff are appropriate. 
+ [183 MB] #   Please read the message in the section 'Choices of cutoff values' by running 
+ [183 MB] #   `macs3 hmmratac -h` for detail. 
+ [183 MB] #  **** 
+ [190 MB] #  We expand the training regions with 1000 basepairs and merge overlap 
+ [190 MB] #4 Train Hidden Markov Model with Multivariate Gaussian Emission 
+ [190 MB] #  Extract signals in training regions with bin size of 10 
+ [198 MB] #  Use Baum-Welch algorithm to train the HMM 
+ [198 MB] #   HMM converged: True 
+ [198 MB] #  Write HMM parameters into JSON: /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/33_model.json 
+ [198 MB] #  The Hidden Markov Model for signals of binsize of 10 basepairs: 
+ [198 MB] #   open state index: state0 
+ [198 MB] #   nucleosomal state index: state2 
+ [198 MB] #   background state index: state1 
+ [198 MB] #   Starting probabilities of states: 
+ [198 MB] #                          open         bg        nuc 
+ [198 MB] #                     6.792e-32     0.9645    0.03553 
+ [198 MB] #   HMM Transition probabilities: 
+ [198 MB] #                          open         bg        nuc 
+ [198 MB] #             open->     0.9823  2.479e-22    0.01765 
+ [198 MB] #               bg->  5.498e-05     0.9885    0.01144 
+ [198 MB] #              nuc->    0.01625    0.01755     0.9662 
+ [198 MB] #   HMM Emissions (mean):  
+ [198 MB] #                         short       mono         di        tri 
+ [198 MB] #             open:       57.86      172.1      82.29       21.8 
+ [198 MB] #               bg:       1.759       6.25      4.698      1.969 
+ [198 MB] #              nuc:       11.33      38.71      25.29      8.824 
+ [198 MB] #5 Decode with Viterbi to predict states 
+ [198 MB] #5  Total candidate peaks : 546 
+ [198 MB] #  We expand the candidate regions with 1000 and merge overlap 
+ [198 MB] #  Extract signals in candidate regions and decode with HMM 
+ [198 MB] #  Use HMM to predict states 
+ [198 MB] #    decoding 1000... 
+ [272 MB] # Write the output... 
+ [272 MB] # Write accessible regions in a gappedPeak file: 33_accessible_regions.gappedPeak 
+ [106 MB] 
+# Command line: hmmratac -l 8 -u 25 -c 3 --means 75 170 340 510 --stddevs 15 15 15 15 -i 34-markdup-regions.bam --outdir /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3 -n 34
+# Random seed selected as: 10151
+ 
+ [106 MB] #1 Read fragments from BAMPE file... 
+ [146 MB]  1000000 fragments parsed 
+ [155 MB] 1909873 fragments have been read. 
+ [155 MB] #2 Use EM algorithm to estimate means and stddevs of fragment lengths 
+ [155 MB] #  for mono-, di-, and tri-nucleosomal signals... 
+ [155 MB] # A random seed 10151 has been used in the sampling function 
+ [155 MB] # Downsampled 104294 fragments will be used for EM training... 
+ [155 MB] # Reached convergence after 11 iterations 
+ [155 MB] #  The means and stddevs after EM: 
+ [155 MB] #                         short       mono         di        tri 
+ [155 MB] #             means:         75      163.4      320.9      448.9 
+ [155 MB] #           stddevs:         15       45.8       42.7       24.7 
+ [155 MB] #  Compute the weights for each fragment length for each of the four signal types 
+ [155 MB] #  Generate short, mono-, di-, and tri-nucleosomal signals 
+ [169 MB] #  Pile up all fragments 
+ [170 MB] #  Convert pileup to fold-change over average signal 
+ [170 MB] #3 Look for training set from 1909873 fragments 
+ [170 MB] #  Call peak above within fold-change range of 8 and 25. 
+ [170 MB] #   The minimum length of the region is set as the average template/fragment length in the dataset: 144 
+ [170 MB] #   The maximum gap to merge nearby significant regions is set as the flanking size to extend training regions: 1000 
+ [170 MB] #  Total training regions called after applying the lower cutoff 8: 201 
+ [170 MB] #  Total training regions after filtering with upper cutoff 25: 187 
+ [170 MB] #  **IMPORTANT** 
+ [170 MB] #  Please review the cutoff analysis result in /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/34_cutoff_analysis.tsv to verify 
+ [170 MB] #   if the choices of lower, upper and prescanning cutoff are appropriate. 
+ [170 MB] #   Please read the message in the section 'Choices of cutoff values' by running 
+ [170 MB] #   `macs3 hmmratac -h` for detail. 
+ [170 MB] #  **** 
+ [176 MB] #  We expand the training regions with 1000 basepairs and merge overlap 
+ [176 MB] #4 Train Hidden Markov Model with Multivariate Gaussian Emission 
+ [176 MB] #  Extract signals in training regions with bin size of 10 
+ [188 MB] #  Use Baum-Welch algorithm to train the HMM 
+ [188 MB] #   HMM converged: True 
+ [188 MB] #  Write HMM parameters into JSON: /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/34_model.json 
+ [188 MB] #  The Hidden Markov Model for signals of binsize of 10 basepairs: 
+ [188 MB] #   open state index: state2 
+ [188 MB] #   nucleosomal state index: state0 
+ [188 MB] #   background state index: state1 
+ [188 MB] #   Starting probabilities of states: 
+ [188 MB] #                           nuc         bg       open 
+ [188 MB] #                       0.05722     0.9428  6.221e-36 
+ [188 MB] #   HMM Transition probabilities: 
+ [188 MB] #                           nuc         bg       open 
+ [188 MB] #              nuc->     0.9624    0.01827    0.01932 
+ [188 MB] #               bg->    0.01051     0.9895  1.179e-12 
+ [188 MB] #             open->     0.0211  1.322e-11     0.9789 
+ [188 MB] #   HMM Emissions (mean):  
+ [188 MB] #                         short       mono         di        tri 
+ [188 MB] #              nuc:          12      25.14      20.35      6.698 
+ [188 MB] #               bg:       2.387      4.911      4.335      1.539 
+ [188 MB] #             open:       56.01      105.6      58.52      13.25 
+ [188 MB] #5 Decode with Viterbi to predict states 
+ [188 MB] #5  Total candidate peaks : 567 
+ [188 MB] #  We expand the candidate regions with 1000 and merge overlap 
+ [188 MB] #  Extract signals in candidate regions and decode with HMM 
+ [188 MB] #  Use HMM to predict states 
+ [188 MB] #    decoding 1000... 
+ [273 MB] # Write the output... 
+ [273 MB] # Write accessible regions in a gappedPeak file: 34_accessible_regions.gappedPeak 
+ [105 MB] 
+# Command line: hmmratac -l 8 -u 25 -c 3 --means 75 170 340 510 --stddevs 15 15 15 15 -i 34Q-markdup-regions.bam --outdir /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3 -n 34Q
+# Random seed selected as: 10151
+ 
+ [105 MB] #1 Read fragments from BAMPE file... 
+ [145 MB]  1000000 fragments parsed 
+ [154 MB] 1964684 fragments have been read. 
+ [154 MB] #2 Use EM algorithm to estimate means and stddevs of fragment lengths 
+ [154 MB] #  for mono-, di-, and tri-nucleosomal signals... 
+ [154 MB] # A random seed 10151 has been used in the sampling function 
+ [154 MB] # Downsampled 125481 fragments will be used for EM training... 
+ [154 MB] # Reached convergence after 11 iterations 
+ [154 MB] #  The means and stddevs after EM: 
+ [154 MB] #                         short       mono         di        tri 
+ [154 MB] #             means:         75      166.3      324.9        450 
+ [154 MB] #           stddevs:         15       46.6       42.6       24.2 
+ [154 MB] #  Compute the weights for each fragment length for each of the four signal types 
+ [154 MB] #  Generate short, mono-, di-, and tri-nucleosomal signals 
+ [171 MB] #  Pile up all fragments 
+ [171 MB] #  Convert pileup to fold-change over average signal 
+ [171 MB] #3 Look for training set from 1964684 fragments 
+ [171 MB] #  Call peak above within fold-change range of 8 and 25. 
+ [171 MB] #   The minimum length of the region is set as the average template/fragment length in the dataset: 162 
+ [171 MB] #   The maximum gap to merge nearby significant regions is set as the flanking size to extend training regions: 1000 
+ [171 MB] #  Total training regions called after applying the lower cutoff 8: 272 
+ [171 MB] #  Total training regions after filtering with upper cutoff 25: 215 
+ [171 MB] #  **IMPORTANT** 
+ [171 MB] #  Please review the cutoff analysis result in /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/34Q_cutoff_analysis.tsv to verify 
+ [171 MB] #   if the choices of lower, upper and prescanning cutoff are appropriate. 
+ [171 MB] #   Please read the message in the section 'Choices of cutoff values' by running 
+ [171 MB] #   `macs3 hmmratac -h` for detail. 
+ [171 MB] #  **** 
+ [172 MB] #  We expand the training regions with 1000 basepairs and merge overlap 
+ [172 MB] #4 Train Hidden Markov Model with Multivariate Gaussian Emission 
+ [172 MB] #  Extract signals in training regions with bin size of 10 
+ [190 MB] #  Use Baum-Welch algorithm to train the HMM 
+ [190 MB] #   HMM converged: True 
+ [190 MB] #  Write HMM parameters into JSON: /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/34Q_model.json 
+ [190 MB] #  The Hidden Markov Model for signals of binsize of 10 basepairs: 
+ [190 MB] #   open state index: state0 
+ [190 MB] #   nucleosomal state index: state2 
+ [190 MB] #   background state index: state1 
+ [190 MB] #   Starting probabilities of states: 
+ [190 MB] #                          open         bg        nuc 
+ [190 MB] #                     1.084e-28      0.926    0.07403 
+ [190 MB] #   HMM Transition probabilities: 
+ [190 MB] #                          open         bg        nuc 
+ [190 MB] #             open->     0.9796  4.534e-15    0.02036 
+ [190 MB] #               bg->  3.886e-27     0.9893    0.01067 
+ [190 MB] #              nuc->    0.01808    0.01884     0.9631 
+ [190 MB] #   HMM Emissions (mean):  
+ [190 MB] #                         short       mono         di        tri 
+ [190 MB] #             open:       56.76      129.6      71.95      17.95 
+ [190 MB] #               bg:       1.332      4.218      3.868      1.625 
+ [190 MB] #              nuc:       8.947      25.27      22.81      8.598 
+ [190 MB] #5 Decode with Viterbi to predict states 
+ [190 MB] #5  Total candidate peaks : 618 
+ [190 MB] #  We expand the candidate regions with 1000 and merge overlap 
+ [190 MB] #  Extract signals in candidate regions and decode with HMM 
+ [190 MB] #  Use HMM to predict states 
+ [190 MB] #    decoding 1000... 
+ [280 MB] # Write the output... 
+ [280 MB] # Write accessible regions in a gappedPeak file: 34Q_accessible_regions.gappedPeak 
+ [106 MB] 
+# Command line: hmmratac -l 8 -u 25 -c 3 --means 75 170 340 510 --stddevs 15 15 15 15 -i 35-markdup-regions.bam --outdir /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3 -n 35
+# Random seed selected as: 10151
+ 
+ [106 MB] #1 Read fragments from BAMPE file... 
+ [146 MB]  1000000 fragments parsed 
+ [150 MB] 1558377 fragments have been read. 
+ [150 MB] #2 Use EM algorithm to estimate means and stddevs of fragment lengths 
+ [150 MB] #  for mono-, di-, and tri-nucleosomal signals... 
+ [150 MB] # A random seed 10151 has been used in the sampling function 
+ [150 MB] # Downsampled 79382 fragments will be used for EM training... 
+ [150 MB] # Reached maximum number (20) of iterations 
+ [150 MB] #  The means and stddevs after EM: 
+ [150 MB] #                         short       mono         di        tri 
+ [150 MB] #             means:         75      183.2      363.2        464 
+ [150 MB] #           stddevs:         15       57.8       33.7         18 
+ [150 MB] #  Compute the weights for each fragment length for each of the four signal types 
+ [150 MB] #  Generate short, mono-, di-, and tri-nucleosomal signals 
+ [160 MB] #  Pile up all fragments 
+ [160 MB] #  Convert pileup to fold-change over average signal 
+ [160 MB] #3 Look for training set from 1558377 fragments 
+ [160 MB] #  Call peak above within fold-change range of 8 and 25. 
+ [160 MB] #   The minimum length of the region is set as the average template/fragment length in the dataset: 139 
+ [160 MB] #   The maximum gap to merge nearby significant regions is set as the flanking size to extend training regions: 1000 
+ [160 MB] #  Total training regions called after applying the lower cutoff 8: 259 
+ [160 MB] #  Total training regions after filtering with upper cutoff 25: 213 
+ [160 MB] #  **IMPORTANT** 
+ [160 MB] #  Please review the cutoff analysis result in /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/35_cutoff_analysis.tsv to verify 
+ [160 MB] #   if the choices of lower, upper and prescanning cutoff are appropriate. 
+ [160 MB] #   Please read the message in the section 'Choices of cutoff values' by running 
+ [160 MB] #   `macs3 hmmratac -h` for detail. 
+ [160 MB] #  **** 
+ [171 MB] #  We expand the training regions with 1000 basepairs and merge overlap 
+ [171 MB] #4 Train Hidden Markov Model with Multivariate Gaussian Emission 
+ [171 MB] #  Extract signals in training regions with bin size of 10 
+ [187 MB] #  Use Baum-Welch algorithm to train the HMM 
+ [187 MB] #   HMM converged: True 
+ [187 MB] #  Write HMM parameters into JSON: /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/35_model.json 
+ [187 MB] #  The Hidden Markov Model for signals of binsize of 10 basepairs: 
+ [187 MB] #   open state index: state1 
+ [187 MB] #   nucleosomal state index: state0 
+ [187 MB] #   background state index: state2 
+ [187 MB] #   Starting probabilities of states: 
+ [187 MB] #                           nuc       open         bg 
+ [187 MB] #                       0.05625   3.24e-29     0.9438 
+ [187 MB] #   HMM Transition probabilities: 
+ [187 MB] #                           nuc       open         bg 
+ [187 MB] #              nuc->     0.9654     0.0163    0.01831 
+ [187 MB] #             open->    0.02094     0.9791  4.308e-14 
+ [187 MB] #               bg->    0.01101  8.817e-25      0.989 
+ [187 MB] #   HMM Emissions (mean):  
+ [187 MB] #                         short       mono         di        tri 
+ [187 MB] #              nuc:       9.084      23.78      10.37      2.593 
+ [187 MB] #             open:       51.32      101.3       29.2      5.553 
+ [187 MB] #               bg:       1.549      4.048      1.992     0.4821 
+ [187 MB] #5 Decode with Viterbi to predict states 
+ [187 MB] #5  Total candidate peaks : 663 
+ [187 MB] #  We expand the candidate regions with 1000 and merge overlap 
+ [187 MB] #  Extract signals in candidate regions and decode with HMM 
+ [187 MB] #  Use HMM to predict states 
+ [187 MB] #    decoding 1000... 
+ [282 MB] # Write the output... 
+ [282 MB] # Write accessible regions in a gappedPeak file: 35_accessible_regions.gappedPeak 
+ [105 MB] 
+# Command line: hmmratac -l 8 -u 25 -c 3 --means 75 170 340 510 --stddevs 15 15 15 15 -i 36-markdup-regions.bam --outdir /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3 -n 36
+# Random seed selected as: 10151
+ 
+ [105 MB] #1 Read fragments from BAMPE file... 
+ [145 MB]  1000000 fragments parsed 
+ [146 MB]  2000000 fragments parsed 
+ [151 MB] 2825084 fragments have been read. 
+ [151 MB] #2 Use EM algorithm to estimate means and stddevs of fragment lengths 
+ [151 MB] #  for mono-, di-, and tri-nucleosomal signals... 
+ [151 MB] # A random seed 10151 has been used in the sampling function 
+ [154 MB] # Downsampled 117732 fragments will be used for EM training... 
+ [154 MB] # Reached maximum number (20) of iterations 
+ [154 MB] #  The means and stddevs after EM: 
+ [154 MB] #                         short       mono         di        tri 
+ [154 MB] #             means:         75      169.5      355.6      467.6 
+ [154 MB] #           stddevs:         15         52       38.5       16.8 
+ [154 MB] #  Compute the weights for each fragment length for each of the four signal types 
+ [154 MB] #  Generate short, mono-, di-, and tri-nucleosomal signals 
+ [193 MB] #  Pile up all fragments 
+ [193 MB] #  Convert pileup to fold-change over average signal 
+ [193 MB] #3 Look for training set from 2825084 fragments 
+ [193 MB] #  Call peak above within fold-change range of 8 and 25. 
+ [193 MB] #   The minimum length of the region is set as the average template/fragment length in the dataset: 116 
+ [193 MB] #   The maximum gap to merge nearby significant regions is set as the flanking size to extend training regions: 1000 
+ [193 MB] #  Total training regions called after applying the lower cutoff 8: 356 
+ [193 MB] #  Total training regions after filtering with upper cutoff 25: 305 
+ [193 MB] #  **IMPORTANT** 
+ [193 MB] #  Please review the cutoff analysis result in /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/36_cutoff_analysis.tsv to verify 
+ [193 MB] #   if the choices of lower, upper and prescanning cutoff are appropriate. 
+ [193 MB] #   Please read the message in the section 'Choices of cutoff values' by running 
+ [193 MB] #   `macs3 hmmratac -h` for detail. 
+ [193 MB] #  **** 
+ [203 MB] #  We expand the training regions with 1000 basepairs and merge overlap 
+ [203 MB] #4 Train Hidden Markov Model with Multivariate Gaussian Emission 
+ [203 MB] #  Extract signals in training regions with bin size of 10 
+ [227 MB] #  Use Baum-Welch algorithm to train the HMM 
+ [227 MB] #   HMM converged: True 
+ [227 MB] #  Write HMM parameters into JSON: /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/36_model.json 
+ [227 MB] #  The Hidden Markov Model for signals of binsize of 10 basepairs: 
+ [227 MB] #   open state index: state2 
+ [227 MB] #   nucleosomal state index: state1 
+ [227 MB] #   background state index: state0 
+ [227 MB] #   Starting probabilities of states: 
+ [227 MB] #                            bg        nuc       open 
+ [227 MB] #                        0.9423    0.05159   0.006108 
+ [227 MB] #   HMM Transition probabilities: 
+ [227 MB] #                            bg        nuc       open 
+ [227 MB] #               bg->     0.9898   0.009765  0.0004154 
+ [227 MB] #              nuc->    0.01912     0.9695    0.01143 
+ [227 MB] #             open->   0.001383    0.01963      0.979 
+ [227 MB] #   HMM Emissions (mean):  
+ [227 MB] #                         short       mono         di        tri 
+ [227 MB] #               bg:       2.188      5.276        2.8      0.497 
+ [227 MB] #              nuc:       51.74      66.97      13.41      1.551 
+ [227 MB] #             open:       60.26      105.4      34.62      6.264 
+ [227 MB] #5 Decode with Viterbi to predict states 
+ [227 MB] #5  Total candidate peaks : 882 
+ [227 MB] #  We expand the candidate regions with 1000 and merge overlap 
+ [227 MB] #  Extract signals in candidate regions and decode with HMM 
+ [227 MB] #  Use HMM to predict states 
+ [227 MB] #    decoding 1000... 
+ [343 MB] # Write the output... 
+ [343 MB] # Write accessible regions in a gappedPeak file: 36_accessible_regions.gappedPeak 
+ [106 MB] 
+# Command line: hmmratac -l 8 -u 25 -c 3 --means 75 170 340 510 --stddevs 15 15 15 15 -i 37-markdup-regions.bam --outdir /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3 -n 37
+# Random seed selected as: 10151
+ 
+ [106 MB] #1 Read fragments from BAMPE file... 
+ [145 MB] 818211 fragments have been read. 
+ [145 MB] #2 Use EM algorithm to estimate means and stddevs of fragment lengths 
+ [145 MB] #  for mono-, di-, and tri-nucleosomal signals... 
+ [145 MB] # A random seed 10151 has been used in the sampling function 
+ [145 MB] # Downsampled 51513 fragments will be used for EM training... 
+ [145 MB] # Reached maximum number (20) of iterations 
+ [145 MB] #  The means and stddevs after EM: 
+ [145 MB] #                         short       mono         di        tri 
+ [145 MB] #             means:         75      174.6      338.4      448.8 
+ [145 MB] #           stddevs:         15       51.8       35.7       25.3 
+ [145 MB] #  Compute the weights for each fragment length for each of the four signal types 
+ [145 MB] #  Generate short, mono-, di-, and tri-nucleosomal signals 
+ [156 MB] #  Pile up all fragments 
+ [156 MB] #  Convert pileup to fold-change over average signal 
+ [156 MB] #3 Look for training set from 818211 fragments 
+ [156 MB] #  Call peak above within fold-change range of 8 and 25. 
+ [156 MB] #   The minimum length of the region is set as the average template/fragment length in the dataset: 159 
+ [156 MB] #   The maximum gap to merge nearby significant regions is set as the flanking size to extend training regions: 1000 
+ [159 MB] #  Total training regions called after applying the lower cutoff 8: 228 
+ [159 MB] #  Total training regions after filtering with upper cutoff 25: 192 
+ [159 MB] #  **IMPORTANT** 
+ [159 MB] #  Please review the cutoff analysis result in /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/37_cutoff_analysis.tsv to verify 
+ [159 MB] #   if the choices of lower, upper and prescanning cutoff are appropriate. 
+ [159 MB] #   Please read the message in the section 'Choices of cutoff values' by running 
+ [159 MB] #   `macs3 hmmratac -h` for detail. 
+ [159 MB] #  **** 
+ [161 MB] #  We expand the training regions with 1000 basepairs and merge overlap 
+ [161 MB] #4 Train Hidden Markov Model with Multivariate Gaussian Emission 
+ [161 MB] #  Extract signals in training regions with bin size of 10 
+ [183 MB] #  Use Baum-Welch algorithm to train the HMM 
+ [183 MB] #   HMM converged: True 
+ [183 MB] #  Write HMM parameters into JSON: /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/37_model.json 
+ [183 MB] #  The Hidden Markov Model for signals of binsize of 10 basepairs: 
+ [183 MB] #   open state index: state2 
+ [183 MB] #   nucleosomal state index: state0 
+ [183 MB] #   background state index: state1 
+ [183 MB] #   Starting probabilities of states: 
+ [183 MB] #                           nuc         bg       open 
+ [183 MB] #                       0.09948     0.8902    0.01033 
+ [183 MB] #   HMM Transition probabilities: 
+ [183 MB] #                           nuc         bg       open 
+ [183 MB] #              nuc->     0.9637    0.01946    0.01682 
+ [183 MB] #               bg->    0.01252     0.9875  2.745e-09 
+ [183 MB] #             open->     0.0184  7.201e-05     0.9815 
+ [183 MB] #   HMM Emissions (mean):  
+ [183 MB] #                         short       mono         di        tri 
+ [183 MB] #              nuc:        3.04      9.319      5.655      2.614 
+ [183 MB] #               bg:      0.4823      1.498     0.9287     0.4114 
+ [183 MB] #             open:       20.64      53.91      21.08      6.776 
+ [183 MB] #5 Decode with Viterbi to predict states 
+ [183 MB] #5  Total candidate peaks : 538 
+ [183 MB] #  We expand the candidate regions with 1000 and merge overlap 
+ [183 MB] #  Extract signals in candidate regions and decode with HMM 
+ [183 MB] #  Use HMM to predict states 
+ [183 MB] #    decoding 1000... 
+ [254 MB] # Write the output... 
+ [254 MB] # Write accessible regions in a gappedPeak file: 37_accessible_regions.gappedPeak 
+ [105 MB] 
+# Command line: hmmratac -l 8 -u 25 -c 3 --means 75 170 340 510 --stddevs 15 15 15 15 -i 37Q-markdup-regions.bam --outdir /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3 -n 37Q
+# Random seed selected as: 10151
+ 
+ [105 MB] #1 Read fragments from BAMPE file... 
+ [144 MB]  1000000 fragments parsed 
+ [152 MB]  2000000 fragments parsed 
+ [159 MB]  3000000 fragments parsed 
+ [159 MB] 3057064 fragments have been read. 
+ [159 MB] #2 Use EM algorithm to estimate means and stddevs of fragment lengths 
+ [159 MB] #  for mono-, di-, and tri-nucleosomal signals... 
+ [159 MB] # A random seed 10151 has been used in the sampling function 
+ [159 MB] # Downsampled 187690 fragments will be used for EM training... 
+ [159 MB] # Reached convergence after 20 iterations 
+ [159 MB] # Reached maximum number (20) of iterations 
+ [159 MB] #  The means and stddevs after EM: 
+ [159 MB] #                         short       mono         di        tri 
+ [159 MB] #             means:         75      170.4      327.9      441.2 
+ [159 MB] #           stddevs:         15       49.8       35.4       27.2 
+ [159 MB] #  Compute the weights for each fragment length for each of the four signal types 
+ [159 MB] #  Generate short, mono-, di-, and tri-nucleosomal signals 
+ [202 MB] #  Pile up all fragments 
+ [202 MB] #  Convert pileup to fold-change over average signal 
+ [202 MB] #3 Look for training set from 3057064 fragments 
+ [202 MB] #  Call peak above within fold-change range of 8 and 25. 
+ [202 MB] #   The minimum length of the region is set as the average template/fragment length in the dataset: 155 
+ [202 MB] #   The maximum gap to merge nearby significant regions is set as the flanking size to extend training regions: 1000 
+ [202 MB] #  Total training regions called after applying the lower cutoff 8: 256 
+ [202 MB] #  Total training regions after filtering with upper cutoff 25: 210 
+ [202 MB] #  **IMPORTANT** 
+ [202 MB] #  Please review the cutoff analysis result in /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/37Q_cutoff_analysis.tsv to verify 
+ [202 MB] #   if the choices of lower, upper and prescanning cutoff are appropriate. 
+ [202 MB] #   Please read the message in the section 'Choices of cutoff values' by running 
+ [202 MB] #   `macs3 hmmratac -h` for detail. 
+ [202 MB] #  **** 
+ [214 MB] #  We expand the training regions with 1000 basepairs and merge overlap 
+ [214 MB] #4 Train Hidden Markov Model with Multivariate Gaussian Emission 
+ [214 MB] #  Extract signals in training regions with bin size of 10 
+ [225 MB] #  Use Baum-Welch algorithm to train the HMM 
+ [225 MB] #   HMM converged: True 
+ [225 MB] #  Write HMM parameters into JSON: /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/37Q_model.json 
+ [225 MB] #  The Hidden Markov Model for signals of binsize of 10 basepairs: 
+ [225 MB] #   open state index: state0 
+ [225 MB] #   nucleosomal state index: state2 
+ [225 MB] #   background state index: state1 
+ [225 MB] #   Starting probabilities of states: 
+ [225 MB] #                          open         bg        nuc 
+ [225 MB] #                     7.042e-26     0.9402    0.05981 
+ [225 MB] #   HMM Transition probabilities: 
+ [225 MB] #                          open         bg        nuc 
+ [225 MB] #             open->     0.9799  6.649e-17    0.02008 
+ [225 MB] #               bg->  1.164e-25       0.99    0.01004 
+ [225 MB] #              nuc->    0.01886    0.01815      0.963 
+ [225 MB] #   HMM Emissions (mean):  
+ [225 MB] #                         short       mono         di        tri 
+ [225 MB] #             open:       86.76      210.1      90.41      25.86 
+ [225 MB] #               bg:       2.694      7.267      4.723      2.253 
+ [225 MB] #              nuc:       14.01      41.24      27.85      13.23 
+ [225 MB] #5 Decode with Viterbi to predict states 
+ [225 MB] #5  Total candidate peaks : 590 
+ [225 MB] #  We expand the candidate regions with 1000 and merge overlap 
+ [225 MB] #  Extract signals in candidate regions and decode with HMM 
+ [225 MB] #  Use HMM to predict states 
+ [225 MB] #    decoding 1000... 
+ [302 MB] # Write the output... 
+ [302 MB] # Write accessible regions in a gappedPeak file: 37Q_accessible_regions.gappedPeak 
+ [105 MB] 
+# Command line: hmmratac -l 8 -u 25 -c 3 --means 75 170 340 510 --stddevs 15 15 15 15 -i 38-markdup-regions.bam --outdir /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3 -n 38
+# Random seed selected as: 10151
+ 
+ [105 MB] #1 Read fragments from BAMPE file... 
+ [146 MB]  1000000 fragments parsed 
+ [151 MB] 1562944 fragments have been read. 
+ [151 MB] #2 Use EM algorithm to estimate means and stddevs of fragment lengths 
+ [151 MB] #  for mono-, di-, and tri-nucleosomal signals... 
+ [151 MB] # A random seed 10151 has been used in the sampling function 
+ [151 MB] # Downsampled 59007 fragments will be used for EM training... 
+ [151 MB] # Reached convergence after 19 iterations 
+ [151 MB] #  The means and stddevs after EM: 
+ [151 MB] #                         short       mono         di        tri 
+ [151 MB] #             means:         75        184        366      463.9 
+ [151 MB] #           stddevs:         15       57.2       33.2       18.2 
+ [151 MB] #  Compute the weights for each fragment length for each of the four signal types 
+ [151 MB] #  Generate short, mono-, di-, and tri-nucleosomal signals 
+ [157 MB] #  Pile up all fragments 
+ [157 MB] #  Convert pileup to fold-change over average signal 
+ [157 MB] #3 Look for training set from 1562944 fragments 
+ [157 MB] #  Call peak above within fold-change range of 8 and 25. 
+ [157 MB] #   The minimum length of the region is set as the average template/fragment length in the dataset: 115 
+ [157 MB] #   The maximum gap to merge nearby significant regions is set as the flanking size to extend training regions: 1000 
+ [157 MB] #  Total training regions called after applying the lower cutoff 8: 348 
+ [157 MB] #  Total training regions after filtering with upper cutoff 25: 295 
+ [157 MB] #  **IMPORTANT** 
+ [157 MB] #  Please review the cutoff analysis result in /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/38_cutoff_analysis.tsv to verify 
+ [157 MB] #   if the choices of lower, upper and prescanning cutoff are appropriate. 
+ [157 MB] #   Please read the message in the section 'Choices of cutoff values' by running 
+ [157 MB] #   `macs3 hmmratac -h` for detail. 
+ [157 MB] #  **** 
+ [164 MB] #  We expand the training regions with 1000 basepairs and merge overlap 
+ [164 MB] #4 Train Hidden Markov Model with Multivariate Gaussian Emission 
+ [164 MB] #  Extract signals in training regions with bin size of 10 
+ [192 MB] #  Use Baum-Welch algorithm to train the HMM 
+ [192 MB] #   HMM converged: True 
+ [192 MB] #  Write HMM parameters into JSON: /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/38_model.json 
+ [192 MB] #  The Hidden Markov Model for signals of binsize of 10 basepairs: 
+ [192 MB] #   open state index: state2 
+ [192 MB] #   nucleosomal state index: state0 
+ [192 MB] #   background state index: state1 
+ [192 MB] #   Starting probabilities of states: 
+ [192 MB] #                           nuc         bg       open 
+ [192 MB] #                       0.08811     0.9084   0.003473 
+ [192 MB] #   HMM Transition probabilities: 
+ [192 MB] #                           nuc         bg       open 
+ [192 MB] #              nuc->     0.9636     0.0194    0.01701 
+ [192 MB] #               bg->    0.01232     0.9877   1.57e-18 
+ [192 MB] #             open->    0.02114  3.635e-15     0.9789 
+ [192 MB] #   HMM Emissions (mean):  
+ [192 MB] #                         short       mono         di        tri 
+ [192 MB] #              nuc:       5.984      13.25      5.632      1.402 
+ [192 MB] #               bg:      0.9678      2.119      1.019     0.2394 
+ [192 MB] #             open:        50.5      63.67      16.29      3.284 
+ [192 MB] #5 Decode with Viterbi to predict states 
+ [192 MB] #5  Total candidate peaks : 937 
+ [192 MB] #  We expand the candidate regions with 1000 and merge overlap 
+ [192 MB] #  Extract signals in candidate regions and decode with HMM 
+ [192 MB] #  Use HMM to predict states 
+ [192 MB] #    decoding 1000... 
+ [329 MB] # Write the output... 
+ [329 MB] # Write accessible regions in a gappedPeak file: 38_accessible_regions.gappedPeak 
+ [105 MB] 
+# Command line: hmmratac -l 8 -u 25 -c 3 --means 75 170 340 510 --stddevs 15 15 15 15 -i 39-markdup-regions.bam --outdir /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3 -n 39
+# Random seed selected as: 10151
+ 
+ [105 MB] #1 Read fragments from BAMPE file... 
+ [145 MB]  1000000 fragments parsed 
+ [146 MB]  2000000 fragments parsed 
+ [153 MB] 2793000 fragments have been read. 
+ [153 MB] #2 Use EM algorithm to estimate means and stddevs of fragment lengths 
+ [153 MB] #  for mono-, di-, and tri-nucleosomal signals... 
+ [153 MB] # A random seed 10151 has been used in the sampling function 
+ [156 MB] # Downsampled 152721 fragments will be used for EM training... 
+ [156 MB] # Reached maximum number (20) of iterations 
+ [156 MB] #  The means and stddevs after EM: 
+ [156 MB] #                         short       mono         di        tri 
+ [156 MB] #             means:         75      174.4      342.2      450.4 
+ [156 MB] #           stddevs:         15       53.1       35.7       24.3 
+ [156 MB] #  Compute the weights for each fragment length for each of the four signal types 
+ [156 MB] #  Generate short, mono-, di-, and tri-nucleosomal signals 
+ [194 MB] #  Pile up all fragments 
+ [194 MB] #  Convert pileup to fold-change over average signal 
+ [194 MB] #3 Look for training set from 2793000 fragments 
+ [194 MB] #  Call peak above within fold-change range of 8 and 25. 
+ [194 MB] #   The minimum length of the region is set as the average template/fragment length in the dataset: 147 
+ [194 MB] #   The maximum gap to merge nearby significant regions is set as the flanking size to extend training regions: 1000 
+ [194 MB] #  Total training regions called after applying the lower cutoff 8: 242 
+ [194 MB] #  Total training regions after filtering with upper cutoff 25: 195 
+ [194 MB] #  **IMPORTANT** 
+ [194 MB] #  Please review the cutoff analysis result in /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/39_cutoff_analysis.tsv to verify 
+ [194 MB] #   if the choices of lower, upper and prescanning cutoff are appropriate. 
+ [194 MB] #   Please read the message in the section 'Choices of cutoff values' by running 
+ [194 MB] #   `macs3 hmmratac -h` for detail. 
+ [194 MB] #  **** 
+ [201 MB] #  We expand the training regions with 1000 basepairs and merge overlap 
+ [201 MB] #4 Train Hidden Markov Model with Multivariate Gaussian Emission 
+ [201 MB] #  Extract signals in training regions with bin size of 10 
+ [211 MB] #  Use Baum-Welch algorithm to train the HMM 
+ [211 MB] #   HMM converged: True 
+ [211 MB] #  Write HMM parameters into JSON: /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/39_model.json 
+ [211 MB] #  The Hidden Markov Model for signals of binsize of 10 basepairs: 
+ [211 MB] #   open state index: state0 
+ [211 MB] #   nucleosomal state index: state2 
+ [211 MB] #   background state index: state1 
+ [211 MB] #   Starting probabilities of states: 
+ [211 MB] #                          open         bg        nuc 
+ [211 MB] #                     2.898e-34     0.9456    0.05441 
+ [211 MB] #   HMM Transition probabilities: 
+ [211 MB] #                          open         bg        nuc 
+ [211 MB] #             open->     0.9788  9.221e-09    0.02118 
+ [211 MB] #               bg->  1.523e-08     0.9894    0.01064 
+ [211 MB] #              nuc->    0.01834    0.01946     0.9622 
+ [211 MB] #   HMM Emissions (mean):  
+ [211 MB] #                         short       mono         di        tri 
+ [211 MB] #             open:       91.82      175.6         70      20.66 
+ [211 MB] #               bg:       2.447      5.573       3.55      1.545 
+ [211 MB] #              nuc:       16.02       37.7      21.57      8.719 
+ [211 MB] #5 Decode with Viterbi to predict states 
+ [211 MB] #5  Total candidate peaks : 553 
+ [211 MB] #  We expand the candidate regions with 1000 and merge overlap 
+ [211 MB] #  Extract signals in candidate regions and decode with HMM 
+ [211 MB] #  Use HMM to predict states 
+ [211 MB] #    decoding 1000... 
+ [283 MB] # Write the output... 
+ [283 MB] # Write accessible regions in a gappedPeak file: 39_accessible_regions.gappedPeak 
+ [105 MB] 
+# Command line: hmmratac -l 8 -u 25 -c 3 --means 75 170 340 510 --stddevs 15 15 15 15 -i 41-markdup-regions.bam --outdir /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3 -n 41
+# Random seed selected as: 10151
+ 
+ [105 MB] #1 Read fragments from BAMPE file... 
+ [142 MB]  1000000 fragments parsed 
+ [142 MB] 1387336 fragments have been read. 
+ [142 MB] #2 Use EM algorithm to estimate means and stddevs of fragment lengths 
+ [142 MB] #  for mono-, di-, and tri-nucleosomal signals... 
+ [142 MB] # A random seed 10151 has been used in the sampling function 
+ [142 MB] # Downsampled 86177 fragments will be used for EM training... 
+ [142 MB] # Reached maximum number (20) of iterations 
+ [142 MB] #  The means and stddevs after EM: 
+ [142 MB] #                         short       mono         di        tri 
+ [142 MB] #             means:         75      180.7      345.5      451.7 
+ [142 MB] #           stddevs:         15       54.4       34.9       23.2 
+ [142 MB] #  Compute the weights for each fragment length for each of the four signal types 
+ [142 MB] #  Generate short, mono-, di-, and tri-nucleosomal signals 
+ [154 MB] #  Pile up all fragments 
+ [155 MB] #  Convert pileup to fold-change over average signal 
+ [155 MB] #3 Look for training set from 1387336 fragments 
+ [155 MB] #  Call peak above within fold-change range of 8 and 25. 
+ [155 MB] #   The minimum length of the region is set as the average template/fragment length in the dataset: 161 
+ [155 MB] #   The maximum gap to merge nearby significant regions is set as the flanking size to extend training regions: 1000 
+ [158 MB] #  Total training regions called after applying the lower cutoff 8: 174 
+ [158 MB] #  Total training regions after filtering with upper cutoff 25: 155 
+ [158 MB] #  **IMPORTANT** 
+ [158 MB] #  Please review the cutoff analysis result in /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/41_cutoff_analysis.tsv to verify 
+ [158 MB] #   if the choices of lower, upper and prescanning cutoff are appropriate. 
+ [158 MB] #   Please read the message in the section 'Choices of cutoff values' by running 
+ [158 MB] #   `macs3 hmmratac -h` for detail. 
+ [158 MB] #  **** 
+ [167 MB] #  We expand the training regions with 1000 basepairs and merge overlap 
+ [167 MB] #4 Train Hidden Markov Model with Multivariate Gaussian Emission 
+ [167 MB] #  Extract signals in training regions with bin size of 10 
+ [177 MB] #  Use Baum-Welch algorithm to train the HMM 
+ [177 MB] #   HMM converged: True 
+ [177 MB] #  Write HMM parameters into JSON: /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/41_model.json 
+ [177 MB] #  The Hidden Markov Model for signals of binsize of 10 basepairs: 
+ [177 MB] #   open state index: state0 
+ [177 MB] #   nucleosomal state index: state2 
+ [177 MB] #   background state index: state1 
+ [177 MB] #   Starting probabilities of states: 
+ [177 MB] #                          open         bg        nuc 
+ [177 MB] #                     3.014e-22     0.9016    0.09836 
+ [177 MB] #   HMM Transition probabilities: 
+ [177 MB] #                          open         bg        nuc 
+ [177 MB] #             open->     0.9796  5.601e-07    0.02043 
+ [177 MB] #               bg->  1.021e-05     0.9872    0.01278 
+ [177 MB] #              nuc->    0.01605    0.01667     0.9673 
+ [177 MB] #   HMM Emissions (mean):  
+ [177 MB] #                         short       mono         di        tri 
+ [177 MB] #             open:       38.08      96.25      42.93       10.8 
+ [177 MB] #               bg:       1.458      4.905      3.005     0.9564 
+ [177 MB] #              nuc:        7.76      24.11       14.3       4.71 
+ [177 MB] #5 Decode with Viterbi to predict states 
+ [177 MB] #5  Total candidate peaks : 510 
+ [177 MB] #  We expand the candidate regions with 1000 and merge overlap 
+ [177 MB] #  Extract signals in candidate regions and decode with HMM 
+ [177 MB] #  Use HMM to predict states 
+ [177 MB] #    decoding 1000... 
+ [252 MB] # Write the output... 
+ [252 MB] # Write accessible regions in a gappedPeak file: 41_accessible_regions.gappedPeak 
+ [105 MB] 
+# Command line: hmmratac -l 8 -u 25 -c 3 --means 75 170 340 510 --stddevs 15 15 15 15 -i 42-markdup-regions.bam --outdir /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3 -n 42
+# Random seed selected as: 10151
+ 
+ [105 MB] #1 Read fragments from BAMPE file... 
+ [137 MB]  1000000 fragments parsed 
+ [141 MB] 1481715 fragments have been read. 
+ [141 MB] #2 Use EM algorithm to estimate means and stddevs of fragment lengths 
+ [141 MB] #  for mono-, di-, and tri-nucleosomal signals... 
+ [141 MB] # A random seed 10151 has been used in the sampling function 
+ [141 MB] # Downsampled 69457 fragments will be used for EM training... 
+ [141 MB] # Reached maximum number (20) of iterations 
+ [141 MB] #  The means and stddevs after EM: 
+ [141 MB] #                         short       mono         di        tri 
+ [141 MB] #             means:         75        180      355.5      460.5 
+ [141 MB] #           stddevs:         15       55.3       35.5       20.7 
+ [141 MB] #  Compute the weights for each fragment length for each of the four signal types 
+ [141 MB] #  Generate short, mono-, di-, and tri-nucleosomal signals 
+ [160 MB] #  Pile up all fragments 
+ [163 MB] #  Convert pileup to fold-change over average signal 
+ [164 MB] #3 Look for training set from 1481715 fragments 
+ [164 MB] #  Call peak above within fold-change range of 8 and 25. 
+ [164 MB] #   The minimum length of the region is set as the average template/fragment length in the dataset: 133 
+ [164 MB] #   The maximum gap to merge nearby significant regions is set as the flanking size to extend training regions: 1000 
+ [166 MB] #  Total training regions called after applying the lower cutoff 8: 174 
+ [166 MB] #  Total training regions after filtering with upper cutoff 25: 167 
+ [166 MB] #  **IMPORTANT** 
+ [166 MB] #  Please review the cutoff analysis result in /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/42_cutoff_analysis.tsv to verify 
+ [166 MB] #   if the choices of lower, upper and prescanning cutoff are appropriate. 
+ [166 MB] #   Please read the message in the section 'Choices of cutoff values' by running 
+ [166 MB] #   `macs3 hmmratac -h` for detail. 
+ [166 MB] #  **** 
+ [181 MB] #  We expand the training regions with 1000 basepairs and merge overlap 
+ [181 MB] #4 Train Hidden Markov Model with Multivariate Gaussian Emission 
+ [181 MB] #  Extract signals in training regions with bin size of 10 
+ [187 MB] #  Use Baum-Welch algorithm to train the HMM 
+ [187 MB] #   HMM converged: True 
+ [187 MB] #  Write HMM parameters into JSON: /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/42_model.json 
+ [187 MB] #  The Hidden Markov Model for signals of binsize of 10 basepairs: 
+ [187 MB] #   open state index: state0 
+ [187 MB] #   nucleosomal state index: state2 
+ [187 MB] #   background state index: state1 
+ [187 MB] #   Starting probabilities of states: 
+ [187 MB] #                          open         bg        nuc 
+ [187 MB] #                     1.203e-09     0.9078    0.09217 
+ [187 MB] #   HMM Transition probabilities: 
+ [187 MB] #                          open         bg        nuc 
+ [187 MB] #             open->     0.9772  2.283e-12     0.0228 
+ [187 MB] #               bg->  3.525e-09     0.9889    0.01111 
+ [187 MB] #              nuc->    0.01802    0.01879     0.9632 
+ [187 MB] #   HMM Emissions (mean):  
+ [187 MB] #                         short       mono         di        tri 
+ [187 MB] #             open:       43.64       76.6      28.07      6.303 
+ [187 MB] #               bg:       2.023      5.006      2.678     0.8489 
+ [187 MB] #              nuc:       10.08      23.82      11.54      4.033 
+ [187 MB] #5 Decode with Viterbi to predict states 
+ [187 MB] #5  Total candidate peaks : 632 
+ [187 MB] #  We expand the candidate regions with 1000 and merge overlap 
+ [187 MB] #  Extract signals in candidate regions and decode with HMM 
+ [187 MB] #  Use HMM to predict states 
+ [187 MB] #    decoding 1000... 
+ [275 MB] # Write the output... 
+ [275 MB] # Write accessible regions in a gappedPeak file: 42_accessible_regions.gappedPeak 
+ [105 MB] 
+# Command line: hmmratac -l 8 -u 25 -c 3 --means 75 170 340 510 --stddevs 15 15 15 15 -i 45-markdup-regions.bam --outdir /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3 -n 45
+# Random seed selected as: 10151
+ 
+ [105 MB] #1 Read fragments from BAMPE file... 
+ [146 MB]  1000000 fragments parsed 
+ [151 MB] 1415603 fragments have been read. 
+ [151 MB] #2 Use EM algorithm to estimate means and stddevs of fragment lengths 
+ [151 MB] #  for mono-, di-, and tri-nucleosomal signals... 
+ [151 MB] # A random seed 10151 has been used in the sampling function 
+ [151 MB] # Downsampled 77445 fragments will be used for EM training... 
+ [151 MB] # Reached convergence after 15 iterations 
+ [151 MB] #  The means and stddevs after EM: 
+ [151 MB] #                         short       mono         di        tri 
+ [151 MB] #             means:         75      168.5      328.2      449.1 
+ [151 MB] #           stddevs:         15       48.4       39.8       25.2 
+ [151 MB] #  Compute the weights for each fragment length for each of the four signal types 
+ [151 MB] #  Generate short, mono-, di-, and tri-nucleosomal signals 
+ [158 MB] #  Pile up all fragments 
+ [158 MB] #  Convert pileup to fold-change over average signal 
+ [158 MB] #3 Look for training set from 1415603 fragments 
+ [158 MB] #  Call peak above within fold-change range of 8 and 25. 
+ [158 MB] #   The minimum length of the region is set as the average template/fragment length in the dataset: 146 
+ [158 MB] #   The maximum gap to merge nearby significant regions is set as the flanking size to extend training regions: 1000 
+ [161 MB] #  Total training regions called after applying the lower cutoff 8: 162 
+ [161 MB] #  Total training regions after filtering with upper cutoff 25: 146 
+ [161 MB] #  **IMPORTANT** 
+ [161 MB] #  Please review the cutoff analysis result in /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/45_cutoff_analysis.tsv to verify 
+ [161 MB] #   if the choices of lower, upper and prescanning cutoff are appropriate. 
+ [161 MB] #   Please read the message in the section 'Choices of cutoff values' by running 
+ [161 MB] #   `macs3 hmmratac -h` for detail. 
+ [161 MB] #  **** 
+ [171 MB] #  We expand the training regions with 1000 basepairs and merge overlap 
+ [171 MB] #4 Train Hidden Markov Model with Multivariate Gaussian Emission 
+ [171 MB] #  Extract signals in training regions with bin size of 10 
+ [179 MB] #  Use Baum-Welch algorithm to train the HMM 
+ [181 MB] #   HMM converged: True 
+ [181 MB] #  Write HMM parameters into JSON: /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/45_model.json 
+ [181 MB] #  The Hidden Markov Model for signals of binsize of 10 basepairs: 
+ [181 MB] #   open state index: state2 
+ [181 MB] #   nucleosomal state index: state0 
+ [181 MB] #   background state index: state1 
+ [181 MB] #   Starting probabilities of states: 
+ [181 MB] #                           nuc         bg       open 
+ [181 MB] #                       0.05572     0.9443    1.8e-39 
+ [181 MB] #   HMM Transition probabilities: 
+ [181 MB] #                           nuc         bg       open 
+ [181 MB] #              nuc->     0.9625    0.01978    0.01773 
+ [181 MB] #               bg->    0.01182     0.9882  2.311e-07 
+ [181 MB] #             open->    0.02019  0.0001039     0.9797 
+ [181 MB] #   HMM Emissions (mean):  
+ [181 MB] #                         short       mono         di        tri 
+ [181 MB] #              nuc:        7.94      18.94      13.76      4.697 
+ [181 MB] #               bg:       1.707      3.818      3.024      1.192 
+ [181 MB] #             open:       37.83      76.22      43.94      11.61 
+ [181 MB] #5 Decode with Viterbi to predict states 
+ [181 MB] #5  Total candidate peaks : 460 
+ [181 MB] #  We expand the candidate regions with 1000 and merge overlap 
+ [181 MB] #  Extract signals in candidate regions and decode with HMM 
+ [181 MB] #  Use HMM to predict states 
+ [181 MB] #    decoding 1000... 
+ [242 MB] # Write the output... 
+ [242 MB] # Write accessible regions in a gappedPeak file: 45_accessible_regions.gappedPeak 
+ [105 MB] 
+# Command line: hmmratac -l 8 -u 25 -c 3 --means 75 170 340 510 --stddevs 15 15 15 15 -i 47-markdup-regions.bam --outdir /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3 -n 47
+# Random seed selected as: 10151
+ 
+ [105 MB] #1 Read fragments from BAMPE file... 
+ [145 MB]  1000000 fragments parsed 
+ [149 MB] 1373568 fragments have been read. 
+ [149 MB] #2 Use EM algorithm to estimate means and stddevs of fragment lengths 
+ [149 MB] #  for mono-, di-, and tri-nucleosomal signals... 
+ [149 MB] # A random seed 10151 has been used in the sampling function 
+ [149 MB] # Downsampled 79497 fragments will be used for EM training... 
+ [149 MB] # Reached maximum number (20) of iterations 
+ [149 MB] #  The means and stddevs after EM: 
+ [149 MB] #                         short       mono         di        tri 
+ [149 MB] #             means:         75      171.8      333.5      448.5 
+ [149 MB] #           stddevs:         15       50.4       37.3       25.4 
+ [149 MB] #  Compute the weights for each fragment length for each of the four signal types 
+ [149 MB] #  Generate short, mono-, di-, and tri-nucleosomal signals 
+ [157 MB] #  Pile up all fragments 
+ [157 MB] #  Convert pileup to fold-change over average signal 
+ [157 MB] #3 Look for training set from 1373568 fragments 
+ [157 MB] #  Call peak above within fold-change range of 8 and 25. 
+ [157 MB] #   The minimum length of the region is set as the average template/fragment length in the dataset: 152 
+ [157 MB] #   The maximum gap to merge nearby significant regions is set as the flanking size to extend training regions: 1000 
+ [160 MB] #  Total training regions called after applying the lower cutoff 8: 201 
+ [160 MB] #  Total training regions after filtering with upper cutoff 25: 185 
+ [160 MB] #  **IMPORTANT** 
+ [160 MB] #  Please review the cutoff analysis result in /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/47_cutoff_analysis.tsv to verify 
+ [160 MB] #   if the choices of lower, upper and prescanning cutoff are appropriate. 
+ [160 MB] #   Please read the message in the section 'Choices of cutoff values' by running 
+ [160 MB] #   `macs3 hmmratac -h` for detail. 
+ [160 MB] #  **** 
+ [171 MB] #  We expand the training regions with 1000 basepairs and merge overlap 
+ [171 MB] #4 Train Hidden Markov Model with Multivariate Gaussian Emission 
+ [171 MB] #  Extract signals in training regions with bin size of 10 
+ [184 MB] #  Use Baum-Welch algorithm to train the HMM 
+ [184 MB] #   HMM converged: True 
+ [184 MB] #  Write HMM parameters into JSON: /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/47_model.json 
+ [184 MB] #  The Hidden Markov Model for signals of binsize of 10 basepairs: 
+ [184 MB] #   open state index: state0 
+ [184 MB] #   nucleosomal state index: state2 
+ [184 MB] #   background state index: state1 
+ [184 MB] #   Starting probabilities of states: 
+ [184 MB] #                          open         bg        nuc 
+ [184 MB] #                     1.014e-32     0.9238    0.07619 
+ [184 MB] #   HMM Transition probabilities: 
+ [184 MB] #                          open         bg        nuc 
+ [184 MB] #             open->     0.9804  3.379e-18    0.01959 
+ [184 MB] #               bg->  4.839e-05     0.9881    0.01182 
+ [184 MB] #              nuc->    0.01701    0.01901      0.964 
+ [184 MB] #   HMM Emissions (mean):  
+ [184 MB] #                         short       mono         di        tri 
+ [184 MB] #             open:       37.24      82.84      40.56      12.29 
+ [184 MB] #               bg:       1.497      3.792      2.515      1.161 
+ [184 MB] #              nuc:       7.565       19.3      12.53      5.114 
+ [184 MB] #5 Decode with Viterbi to predict states 
+ [184 MB] #5  Total candidate peaks : 521 
+ [184 MB] #  We expand the candidate regions with 1000 and merge overlap 
+ [184 MB] #  Extract signals in candidate regions and decode with HMM 
+ [184 MB] #  Use HMM to predict states 
+ [184 MB] #    decoding 1000... 
+ [253 MB] # Write the output... 
+ [253 MB] # Write accessible regions in a gappedPeak file: 47_accessible_regions.gappedPeak 
+ [105 MB] 
+# Command line: hmmratac -l 8 -u 25 -c 3 --means 75 170 340 510 --stddevs 15 15 15 15 -i 97-markdup-regions.bam --outdir /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3 -n 97
+# Random seed selected as: 10151
+ 
+ [105 MB] #1 Read fragments from BAMPE file... 
+ [145 MB]  1000000 fragments parsed 
+ [149 MB] 1836087 fragments have been read. 
+ [149 MB] #2 Use EM algorithm to estimate means and stddevs of fragment lengths 
+ [149 MB] #  for mono-, di-, and tri-nucleosomal signals... 
+ [149 MB] # A random seed 10151 has been used in the sampling function 
+ [149 MB] # Downsampled 129574 fragments will be used for EM training... 
+ [149 MB] # Reached maximum number (20) of iterations 
+ [149 MB] #  The means and stddevs after EM: 
+ [149 MB] #                         short       mono         di        tri 
+ [149 MB] #             means:         75      177.2      336.3      449.7 
+ [149 MB] #           stddevs:         15       51.2       37.2       25.6 
+ [149 MB] #  Compute the weights for each fragment length for each of the four signal types 
+ [149 MB] #  Generate short, mono-, di-, and tri-nucleosomal signals 
+ [163 MB] #  Pile up all fragments 
+ [163 MB] #  Convert pileup to fold-change over average signal 
+ [163 MB] #3 Look for training set from 1836087 fragments 
+ [163 MB] #  Call peak above within fold-change range of 8 and 25. 
+ [163 MB] #   The minimum length of the region is set as the average template/fragment length in the dataset: 183 
+ [163 MB] #   The maximum gap to merge nearby significant regions is set as the flanking size to extend training regions: 1000 
+ [163 MB] #  Total training regions called after applying the lower cutoff 8: 215 
+ [163 MB] #  Total training regions after filtering with upper cutoff 25: 158 
+ [163 MB] #  **IMPORTANT** 
+ [163 MB] #  Please review the cutoff analysis result in /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/97_cutoff_analysis.tsv to verify 
+ [163 MB] #   if the choices of lower, upper and prescanning cutoff are appropriate. 
+ [163 MB] #   Please read the message in the section 'Choices of cutoff values' by running 
+ [163 MB] #   `macs3 hmmratac -h` for detail. 
+ [163 MB] #  **** 
+ [164 MB] #  We expand the training regions with 1000 basepairs and merge overlap 
+ [164 MB] #4 Train Hidden Markov Model with Multivariate Gaussian Emission 
+ [164 MB] #  Extract signals in training regions with bin size of 10 
+ [175 MB] #  Use Baum-Welch algorithm to train the HMM 
+ [175 MB] #   HMM converged: True 
+ [175 MB] #  Write HMM parameters into JSON: /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/97_model.json 
+ [175 MB] #  The Hidden Markov Model for signals of binsize of 10 basepairs: 
+ [175 MB] #   open state index: state2 
+ [175 MB] #   nucleosomal state index: state0 
+ [175 MB] #   background state index: state1 
+ [175 MB] #   Starting probabilities of states: 
+ [175 MB] #                           nuc         bg       open 
+ [175 MB] #                       0.09795      0.902  5.265e-28 
+ [175 MB] #   HMM Transition probabilities: 
+ [175 MB] #                           nuc         bg       open 
+ [175 MB] #              nuc->     0.9648    0.01851     0.0167 
+ [175 MB] #               bg->    0.01189      0.988  5.751e-05 
+ [175 MB] #             open->    0.01785   8.32e-32     0.9822 
+ [175 MB] #   HMM Emissions (mean):  
+ [175 MB] #                         short       mono         di        tri 
+ [175 MB] #              nuc:       7.103      27.62      21.21      9.704 
+ [175 MB] #               bg:       1.163      4.483      3.618      1.744 
+ [175 MB] #             open:       37.62      131.2      78.41      29.04 
+ [175 MB] #5 Decode with Viterbi to predict states 
+ [176 MB] #5  Total candidate peaks : 511 
+ [176 MB] #  We expand the candidate regions with 1000 and merge overlap 
+ [176 MB] #  Extract signals in candidate regions and decode with HMM 
+ [176 MB] #  Use HMM to predict states 
+ [176 MB] #    decoding 1000... 
+ [254 MB] # Write the output... 
+ [254 MB] # Write accessible regions in a gappedPeak file: 97_accessible_regions.gappedPeak 
+ [105 MB] 
+# Command line: hmmratac -l 8 -u 25 -c 3 --means 75 170 340 510 --stddevs 15 15 15 15 -i BY-markdup-regions.bam --outdir /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3 -n BY
+# Random seed selected as: 10151
+ 
+ [105 MB] #1 Read fragments from BAMPE file... 
+ [146 MB]  1000000 fragments parsed 
+ [148 MB] 1812438 fragments have been read. 
+ [148 MB] #2 Use EM algorithm to estimate means and stddevs of fragment lengths 
+ [148 MB] #  for mono-, di-, and tri-nucleosomal signals... 
+ [148 MB] # A random seed 10151 has been used in the sampling function 
+ [148 MB] # Downsampled 96963 fragments will be used for EM training... 
+ [148 MB] # Reached maximum number (20) of iterations 
+ [148 MB] #  The means and stddevs after EM: 
+ [148 MB] #                         short       mono         di        tri 
+ [148 MB] #             means:         75      172.5      346.7      464.6 
+ [148 MB] #           stddevs:         15         52       41.5       17.7 
+ [148 MB] #  Compute the weights for each fragment length for each of the four signal types 
+ [148 MB] #  Generate short, mono-, di-, and tri-nucleosomal signals 
+ [166 MB] #  Pile up all fragments 
+ [169 MB] #  Convert pileup to fold-change over average signal 
+ [169 MB] #3 Look for training set from 1812438 fragments 
+ [169 MB] #  Call peak above within fold-change range of 8 and 25. 
+ [169 MB] #   The minimum length of the region is set as the average template/fragment length in the dataset: 142 
+ [169 MB] #   The maximum gap to merge nearby significant regions is set as the flanking size to extend training regions: 1000 
+ [169 MB] #  Total training regions called after applying the lower cutoff 8: 236 
+ [169 MB] #  Total training regions after filtering with upper cutoff 25: 216 
+ [169 MB] #  **IMPORTANT** 
+ [169 MB] #  Please review the cutoff analysis result in /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/BY_cutoff_analysis.tsv to verify 
+ [169 MB] #   if the choices of lower, upper and prescanning cutoff are appropriate. 
+ [169 MB] #   Please read the message in the section 'Choices of cutoff values' by running 
+ [169 MB] #   `macs3 hmmratac -h` for detail. 
+ [169 MB] #  **** 
+ [177 MB] #  We expand the training regions with 1000 basepairs and merge overlap 
+ [177 MB] #4 Train Hidden Markov Model with Multivariate Gaussian Emission 
+ [177 MB] #  Extract signals in training regions with bin size of 10 
+ [191 MB] #  Use Baum-Welch algorithm to train the HMM 
+ [191 MB] #   HMM converged: True 
+ [191 MB] #  Write HMM parameters into JSON: /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/BY_model.json 
+ [191 MB] #  The Hidden Markov Model for signals of binsize of 10 basepairs: 
+ [191 MB] #   open state index: state2 
+ [191 MB] #   nucleosomal state index: state0 
+ [191 MB] #   background state index: state1 
+ [191 MB] #   Starting probabilities of states: 
+ [191 MB] #                           nuc         bg       open 
+ [191 MB] #                       0.04298      0.957  5.196e-37 
+ [191 MB] #   HMM Transition probabilities: 
+ [191 MB] #                           nuc         bg       open 
+ [191 MB] #              nuc->     0.9615    0.01981    0.01866 
+ [191 MB] #               bg->    0.01071     0.9892    7.3e-05 
+ [191 MB] #             open->    0.02012   1.05e-15     0.9799 
+ [191 MB] #   HMM Emissions (mean):  
+ [191 MB] #                         short       mono         di        tri 
+ [191 MB] #              nuc:       9.884      23.72      14.72      3.525 
+ [191 MB] #               bg:       1.994      4.931      3.249     0.7852 
+ [191 MB] #             open:       52.24      103.9      47.04      7.927 
+ [191 MB] #5 Decode with Viterbi to predict states 
+ [191 MB] #5  Total candidate peaks : 628 
+ [191 MB] #  We expand the candidate regions with 1000 and merge overlap 
+ [191 MB] #  Extract signals in candidate regions and decode with HMM 
+ [191 MB] #  Use HMM to predict states 
+ [191 MB] #    decoding 1000... 
+ [282 MB] # Write the output... 
+ [282 MB] # Write accessible regions in a gappedPeak file: BY_accessible_regions.gappedPeak 
+ [105 MB] 
+# Command line: hmmratac -l 8 -u 25 -c 3 --means 75 170 340 510 --stddevs 15 15 15 15 -i t02-markdup-regions.bam --outdir /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3 -n t02
+# Random seed selected as: 10151
+ 
+ [105 MB] #1 Read fragments from BAMPE file... 
+ [146 MB]  1000000 fragments parsed 
+ [150 MB] 1366289 fragments have been read. 
+ [150 MB] #2 Use EM algorithm to estimate means and stddevs of fragment lengths 
+ [150 MB] #  for mono-, di-, and tri-nucleosomal signals... 
+ [150 MB] # A random seed 10151 has been used in the sampling function 
+ [150 MB] # Downsampled 82173 fragments will be used for EM training... 
+ [150 MB] # Reached maximum number (20) of iterations 
+ [150 MB] #  The means and stddevs after EM: 
+ [150 MB] #                         short       mono         di        tri 
+ [150 MB] #             means:         75      179.2      351.7      461.7 
+ [150 MB] #           stddevs:         15       54.4       37.7       19.5 
+ [150 MB] #  Compute the weights for each fragment length for each of the four signal types 
+ [150 MB] #  Generate short, mono-, di-, and tri-nucleosomal signals 
+ [156 MB] #  Pile up all fragments 
+ [156 MB] #  Convert pileup to fold-change over average signal 
+ [156 MB] #3 Look for training set from 1366289 fragments 
+ [156 MB] #  Call peak above within fold-change range of 8 and 25. 
+ [156 MB] #   The minimum length of the region is set as the average template/fragment length in the dataset: 157 
+ [156 MB] #   The maximum gap to merge nearby significant regions is set as the flanking size to extend training regions: 1000 
+ [157 MB] #  Total training regions called after applying the lower cutoff 8: 175 
+ [157 MB] #  Total training regions after filtering with upper cutoff 25: 168 
+ [157 MB] #  **IMPORTANT** 
+ [157 MB] #  Please review the cutoff analysis result in /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/t02_cutoff_analysis.tsv to verify 
+ [157 MB] #   if the choices of lower, upper and prescanning cutoff are appropriate. 
+ [157 MB] #   Please read the message in the section 'Choices of cutoff values' by running 
+ [157 MB] #   `macs3 hmmratac -h` for detail. 
+ [157 MB] #  **** 
+ [167 MB] #  We expand the training regions with 1000 basepairs and merge overlap 
+ [167 MB] #4 Train Hidden Markov Model with Multivariate Gaussian Emission 
+ [167 MB] #  Extract signals in training regions with bin size of 10 
+ [178 MB] #  Use Baum-Welch algorithm to train the HMM 
+ [178 MB] #   HMM converged: True 
+ [178 MB] #  Write HMM parameters into JSON: /home/mikolaj.radosz/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3/t02_model.json 
+ [178 MB] #  The Hidden Markov Model for signals of binsize of 10 basepairs: 
+ [178 MB] #   open state index: state0 
+ [178 MB] #   nucleosomal state index: state2 
+ [178 MB] #   background state index: state1 
+ [178 MB] #   Starting probabilities of states: 
+ [178 MB] #                          open         bg        nuc 
+ [178 MB] #                     8.493e-19     0.9324     0.0676 
+ [178 MB] #   HMM Transition probabilities: 
+ [178 MB] #                          open         bg        nuc 
+ [178 MB] #             open->     0.9816   5.22e-08    0.01842 
+ [178 MB] #               bg->  5.468e-05     0.9878     0.0121 
+ [178 MB] #              nuc->    0.01695    0.01761     0.9654 
+ [178 MB] #   HMM Emissions (mean):  
+ [178 MB] #                         short       mono         di        tri 
+ [178 MB] #             open:       34.87      88.57      38.78      7.741 
+ [178 MB] #               bg:       1.355      4.088      2.704       0.75 
+ [178 MB] #              nuc:       6.861       20.9      12.48      3.326 
+ [178 MB] #5 Decode with Viterbi to predict states 
+ [178 MB] #5  Total candidate peaks : 518 
+ [178 MB] #  We expand the candidate regions with 1000 and merge overlap 
+ [178 MB] #  Extract signals in candidate regions and decode with HMM 
+ [178 MB] #  Use HMM to predict states 
+ [178 MB] #    decoding 1000... 
+ [250 MB] # Write the output... 
+ [250 MB] # Write accessible regions in a gappedPeak file: t02_accessible_regions.gappedPeak 
