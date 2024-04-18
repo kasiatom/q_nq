@@ -1,0 +1,11 @@
+SampleID,Tissue,Factor,Condition,Treatment,Replicate,bamReads,Peaks,PeakCaller
+3_ec_NQ_I,NA,EC,NQ,YPD,1,reads/3-markdup-regions.bam,peaks/3_accessible_regions.gappedPeak,bed
+97_ec_Q_II,NA,EC,Q,YPD,2,reads/97-markdup-regions.bam,peaks/97_accessible_regions.gappedPeak,bed
+127_ec_NQ_III,NA,EC,NQ,YPD,1,reads/127-markdup-regions.bam,peaks/127_accessible_regions.gappedPeak,bed
+129_ec_NQ_III,NA,EC,NQ,YPD,2,reads/129-markdup-regions.bam,peaks/129_accessible_regions.gappedPeak,bed
+134_ec_NQ_III,NA,EC,NQ,YPD,3,reads/134-markdup-regions.bam,peaks/134_accessible_regions.gappedPeak,bed
+136_ec_NQ_III,NA,EC,NQ,YPD,4,reads/136-markdup-regions.bam,peaks/136_accessible_regions.gappedPeak,bed
+34_ec_Q_I,NA,EC,Q,YPD,3,reads/34Q-markdup-regions.bam,peaks/34Q_accessible_regions.gappedPeak,bed
+37_ec_Q_I,NA,EC,Q,YPD,4,reads/37Q-markdup-regions.bam,peaks/37Q_accessible_regions.gappedPeak,bed
+BYa,NA,EC,WT,YPD,1,reads/BY-markdup-regions.bam,peaks/BY_accessible_regions.gappedPeak,bed
+t02_ancestral,NA,EC,WT,YPD,2,reads/t02-markdup-regions.bam,peaks/t02_accessible_regions.gappedPeak,bed
