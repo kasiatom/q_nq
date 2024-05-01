@@ -39,8 +39,8 @@ conda install bedtools
    1. Cieszylibyśmy się, gdyby wiekszość pików pokrywała się z promotorami i ewentualnie 5' UTR. Pokrycie CDS - też ok, bo do wolna chromatyna, nie miejsce wiązania czynników, więc jesli idzie transkrypcja, to i sekwencje kodująca chyba moze być odkryta.  
    2. Ostatnia kolumna wyniku mówi, ile nukleotydów piku i danego promotora/UTR/CDSu zachodziło na siebie, przedostatnia kolumna to nazwa genu, kolumna 4 to wartość FDR (z programu diffbind)  
    3. Dla listy uzyskanych genów można sprawdzić wzbogacenie GO (np. tutaj https://cbl-gorilla.cs.technion.ac.il/ - jako jedną listę genów posortowaną po rosnącym FDR)  
-   4. Połozenie sekwencji kodującej - z pliku gtf z Ensembl (dla drożdży R64-1-1)  
-   5. Połozenie 5' UTR - z SGD (plik `SGD_all_ORFs_5prime_UTRs.fsa.zip`) - jeśli kilka położeń początków UTR dla tego samego genu, to dalsze od kodonu start  
+   4. Położenie sekwencji kodującej - wzięłam z pliku gtf z Ensembl (dla drożdży R64-1-1)  
+   5. Położenie 5' UTR - wzięłam z SGD (plik `SGD_all_ORFs_5prime_UTRs.fsa.zip`) - jeśli kilka położeń początków UTR dla tego samego genu, to dalsze od kodonu start  
    6. Położenia promotorów z tej pracy: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6633255 (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6633255/bin/supp_gr.245456.118_Supplemental_Data_S5_S8.xlsx, Data_S5, wyrzuciłam wpisy bez przypisanego genu)  
 
        
