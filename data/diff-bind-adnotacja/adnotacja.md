@@ -26,13 +26,13 @@ conda install bedtools
  ```bash
 
  ## promotory
- bedtools intersect -loj -a q_nq.tsv -b promoters.tsv > q_nq_prom.tsv
+ bedtools intersect -wao -a q_nq.tsv -b promoters.tsv > q_nq_prom.tsv
 
  ## 5UTR
-  bedtools intersect -loj -a q_nq.tsv -b 5utr.tsv  > q_nq_5utr.tsv
+  bedtools intersect -wao -a q_nq.tsv -b 5utr.tsv  > q_nq_5utr.tsv
 
   ## sekwencje kodujące
-  bedtools intersect -loj -a q_nq.tsv -b cds.tsv > q_nq_cds.tsv
+  bedtools intersect -wao -a q_nq.tsv -b cds.tsv > q_nq_cds.tsv
   ```
 
   ## Uwagi
