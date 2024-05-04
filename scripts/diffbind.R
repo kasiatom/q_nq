@@ -38,7 +38,7 @@ contrasts <-dba.show(mut_analysis, bContrasts=TRUE)
 mut.wt_sir <- dba.report(mut_analysis, contrast = 5, th=1) 
 mut.wt_whi <- dba.report(mut_analysis, contrast = 6, th=1)
 mut.wt_sps <- dba.report(mut_analysis, contrast = 3, th=1 )
-mut.sir_sps <-dba.report(ec_analysis, contrast = 1, th=1)
+mut.sir_sps <-dba.report(mut_analysis, contrast = 1, th=1)
 ## nic istotnego nie wyszło w porównaniach wt vs inne grupy - może to byc wina niejednorodności kontroli
 ## niewiele wyszło dla WHI vs SPS i WHI vs SIR => pominiemy te porównania
 ## dość dobrze wyszło porównani SIR i SPS => to Pan może przedyskutować
