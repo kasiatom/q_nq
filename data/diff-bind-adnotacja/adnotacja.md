@@ -5,34 +5,29 @@ conda install bedtools
 ```
 
 ## przygotowanie plików wynikowych z diffbind ( na przykładzie pliku q-vs-nq-diffbind.tsv):  
-  1. wyodrębnienie linii gdzie NQ miały statystycznie wyższe wiązanie niż Q (FDR < 0.05 i Conc_NQ > Conc_Q) i zmiana formatu plików (wycięcie tylko kolumn z położeniem plików i FDR, zamiana początków pików gdy koordynaty start < 0 na 1, pozbycie się nagłówka, posortowanie)
-  2.  wyodrębnienie linii gdzie Q miały statystycznie wyższe wiązanie niż NQ (FDR< 0.05 i Conc_Q > Conc_NQ) i zmiana formatu plików (wycięcie tylko kolumn z położeniem plików i FDR, zamiana początków pików gdy koordynaty start < 0 na 1, pozbycie się nagłówka, posortowanie)
+  1. wycięcie tylko kolumn z położeniem plików, fold i FDR, zamiana początków pików gdy koordynaty start < 0 na 1, pozbycie się nagłówka, posortowanie)
+  
 ```bash
  # 1
- tail -n +2 q-vs-nq-diffbind.tsv \
- | awk -F '\t' 'BEGIN {OFS="\t"} {if ($7 > $8 && $11 < 0.05) {print $1,$2,$3,$11 }}' \
- | sort -k1,1V -k2,2n \
- | sed 's/-[0-9]*\t/1\t/' > nq_q.tsv
+ ## chr, start, end, fold, FDR
+ # fold dodatni oznacza że wiązanie z nq jest większe niż z q
+ # ujemny fold - odwrotnie
+ tail -n +2 q-vs-nq-diffbind_TMM.tsv | awk -F '\t' 'BEGIN {OFS="\t"} {if ($1 != "seqnames") {print $1,$2,$3,$9,$11 }}' | sort -k1,1V -k2,2n | sed 's/-[0-9]*\t/1\t/' > nq_q.tsv
 
- # 2
- tail -n +2 q-vs-nq-diffbind.tsv \
- | awk -F '\t' 'BEGIN {OFS="\t"} {if ($7 < $8 && $11 < 0.05) {print $1,$2,$3,$11 }}' \
- | sort -k1,1V -k2,2n \
- | sed 's/-[0-9]*\t/1\t/' > q_nq.tsv
-
+ 
  ```
 
  ## sprawdzenie, czy piki pokrywaja się z promotorami, 5'UTR, sekwencjami kodującymi genów (na przykładzie pliku q_nq.tsv - z poprzedniego kroku)  
  ```bash
 
  ## promotory
- bedtools intersect -wao -a q_nq.tsv -b promoters.tsv > q_nq_prom.tsv
+ bedtools intersect -wao -a nq_q.tsv -b promoters.tsv > nq_q_prom.tsv
 
  ## 5UTR
-  bedtools intersect -wao -a q_nq.tsv -b 5utr.tsv  > q_nq_5utr.tsv
+  bedtools intersect -wao -a nq_q.tsv -b 5utr.tsv  > nq_q_5utr.tsv
 
   ## sekwencje kodujące
-  bedtools intersect -wao -a q_nq.tsv -b cds.tsv > q_nq_cds.tsv
+  bedtools intersect -wao -a nq_q.tsv -b cds.tsv > nq_q_cds.tsv
   ```
 
   ## Uwagi
