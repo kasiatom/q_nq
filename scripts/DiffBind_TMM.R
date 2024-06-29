@@ -18,7 +18,7 @@ mut_TMM  <- dba(sampleSheet="mut.tsv", filter = -1, bLowerScoreBetter = FALSE, p
 mut_TMM <-dba.count (mut_TMM)
 
 ## normalizacja zliczeń - podzielenie przez ogólną liczbę odczytów - prosze doczytać, zrobiłam w opcji domyślnej
-mut_TMM <- dba.normalize(mut_TMM, method=DBA_DESEQ2, normalize=DBA_NORM_NATIVE, BACKGROUND=TRUE)
+mut_RLE <- dba.normalize(mut_TMM, method=DBA_DESEQ2, normalize=DBA_NORM_NATIVE, BACKGROUND=TRUE)
 mut_TMM <- dba.normalize(mut_TMM, method=DBA_EDGER, normalize=DBA_NORM_NATIVE, BACKGROUND=TRUE)
 
 ## rysunek pokazujący, czy próbki sa podobne - to jeszcze nie jest wynik analizy, prosze zobaczyć, że dwie kontrole mocno róźnią sie od siebie
