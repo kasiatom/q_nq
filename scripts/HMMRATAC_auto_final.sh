@@ -5,14 +5,14 @@
 samples=$( ls *.bam  | sed 's/-.*//' | sort | uniq ) 
 
 #echo 
-#read -p 'wartość -u: ' u
-#read -p 'wartość -l: ' l
-#read -p 'wartość -c: ' c
+#read -p '-u value: ' u
+#read -p '-l value: ' l
+#read -p '-c value: ' c
 
 # run HMMRATAC on each sample
 for sample in $samples
 do
 
- macs3 hmmratac -l 8 -u 25 -c 3 --means 75 170 340 510 --stddevs 15 15 15 15 -i "$sample"-markdup-regions.bam --outdir $HOME/BAM-regions-do-HMMRATAC/HMMRATAC_output_l8u25c3 -n "$sample"
+ macs3 hmmratac -l 4 -u 25 -c 1.2 --means 75 170 340 510 --stddevs 15 15 15 15 -i "$sample"-markdup-regions.bam --outdir $HOME/BAM-regions-do-HMMRATAC/HMMRATAC_output_l4u25c1.2 -n "$sample"
 done
 
